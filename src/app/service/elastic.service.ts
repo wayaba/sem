@@ -9,8 +9,11 @@ import { Observable } from 'rxjs';
 export class ElasticService {
 
   private baseUrl = "http://10.241.169.67:9200";
+
+  pageSize: number = 100;
   
   constructor(private http : HttpClient) { }
+
 
   public getHitsByMethod(method: string): Observable<HttpResponse<any>> {
 
@@ -75,9 +78,12 @@ export class ElasticService {
     timeStamp: string = "*",
     paisOrigen: any = "*",
     tipoDoc: any = "*",
-    numDoc: any = "*"): Observable<HttpResponse<any>>{
+    numDoc: any = "*",
+    startPage: number = 0,
+    limitPage: number = 100): Observable<HttpResponse<any>>{
 
       let requestBody: any = {
+        "from" : startPage ,"size" : limitPage, 
         "query": {
           "query_string": {
             "query": `(_source.soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (_source.soa_broker_timestamp: ${ timeStamp }) AND (_source.soa_method: ${ method })AND (_source.message: session_id\\:${ sessionId })`,
