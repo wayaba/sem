@@ -9,11 +9,19 @@ import { Observable } from 'rxjs';
 export class ElasticService {
 
   private baseUrl = "http://10.241.169.67:9200";
+  /*
+  private httpRequestBody : any = {
+    "query": {
+      "query_string": {
+        "query": "(soa_method:ConsultaListadoCuentas)",
+        "analyze_wildcard": true,
+        "default_field": "*"
+      }
+    }
+  }
+  */
 
-  pageSize: number = 100;
-  
   constructor(private http : HttpClient) { }
-
 
   public getHitsByMethod(method: string): Observable<HttpResponse<any>> {
 
@@ -27,6 +35,26 @@ export class ElasticService {
       }
     };
 
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
+
+
+  public getHitsByFilter(method: string = '*', date: string = '*'): Observable<HttpResponse<any>> {
+
+    let filter_method = (method == '')? '*':method;
+    let filter_date = (date == '')? '*':date;
+
+    let requestBody : any = {
+      "query": {
+        "query_string": {
+          "query": `(soa_method: ${filter_method} AND (soa_broker_timestamp: ${filter_date}))`,
+          "analyze_wildcard": true,
+          "default_field": "*"
+        }
+      }
+    };
+
+    console.log(requestBody);
     return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
 
@@ -56,21 +84,6 @@ export class ElasticService {
 
     return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
-  // Desarrollo en curso
-  public getHitsByPerson(paisOrigen: number, tipoDoc: number, numDoc: number): Observable<HttpResponse<any>> {
-
-    let requestBody : any = { 
-      "query": {
-        "query_string": {
-          "query": `(_source.soa_payload: *<paisOrigen>${paisOrigen}</paisOrigen><tipoDoc>${tipoDoc}</tipoDoc><numDoc>${numDoc}    </numDoc>*)`,
-          "analyze_wildcard": true,
-          "default_field": "*"
-        }
-      }
-    };
-
-    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
-  }
 
   public getByParams(
     method: string = "*",
@@ -80,13 +93,17 @@ export class ElasticService {
     tipoDoc: any = "*",
     numDoc: any = "*",
     startPage: number = 0,
-    limitPage: number = 100): Observable<HttpResponse<any>>{
+    limitPage: number = 50): Observable<HttpResponse<any>>{
+
+    method = (method == '')? '*':method;
+    timeStamp = (timeStamp == '')? '*':timeStamp;
+    sessionId = (sessionId == '')? '*':sessionId;
 
       let requestBody: any = {
         "from" : startPage ,"size" : limitPage, 
         "query": {
           "query_string": {
-            "query": `(_source.soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (_source.soa_broker_timestamp: ${ timeStamp }) AND (_source.soa_method: ${ method })AND (_source.message: session_id\\:${ sessionId })`,
+            "query": `(soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (soa_broker_timestamp: ${ timeStamp }) AND (soa_method: ${ method })AND (message: session_id\\:${ sessionId })`,
             "analyze_wildcard": true,
             "default_field": "*"
           }

@@ -3,3 +3,4 @@
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import "~ag-grid-community/dist/styles/ag-theme-material.css";
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import "~ng-pick-datetime/assets/style/picker.min.css";
