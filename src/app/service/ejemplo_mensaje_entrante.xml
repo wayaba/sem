@@ -1,0 +1,47 @@
+<NS1:Envelope xmlns:NS1="http://schemas.xmlsoap.org/soap/envelope/">
+    <NS1:Header>
+        <NS2:soapHeaderRes xmlns:NS2="http://www.supervielle.com.ar/xsd/Integracion/Header-v1">
+        <txId>INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5</txId>
+            <sessionContext>
+                <session>
+                    <userName>svcdynmcrmadmindesa</userName>
+                    <systemId>CRM</systemId>
+                    <canalID>CRM</canalID>
+                </session>
+            </sessionContext>
+            <ResponseData>
+                <Status>SUCCESS</Status>
+            </ResponseData>
+        </NS2:soapHeaderRes>
+    </NS1:Header>
+    <NS1:Body>
+        <NS2:RespConsultaDetalle xmlns:NS2="http://www.supervielle.com.ar/xsd/Integracion/tarjetaDebito/consultaDetalle-v1">
+            <Data>
+                <Row>
+                    <identificador dataTypeName="PLAN SUELDO">
+                        <idTarjeta>4517720262350938   </idTarjeta>
+                    </identificador>
+                    <titular dataTypeName="IdClienteType">
+                        <paisOrigen>80</paisOrigen>
+                        <tipoDoc>4</tipoDoc>
+                        <numDoc>10848016    </numDoc>
+                    </titular>
+                    <tipoTarjeta>
+                        <codigo>P</codigo>
+                        <descripcion>PLAN SUELDO</descripcion>
+                    </tipoTarjeta>
+                    <estado>
+                        <codigo>1</codigo>
+                        <descripcion>Activa</descripcion>
+                    </estado>
+                    <cantExtraccionesATM>0</cantExtraccionesATM>
+                    <cantDepositosATM>0</cantDepositosATM>
+                    <limiteCompra>800.00</limiteCompra>
+                    <limiteExtraccion>700.00</limiteExtraccion>
+                    <vencimiento>2023-08-01</vencimiento>
+                    <cantCompras>0</cantCompras>
+                </Row>
+            </Data>
+        </NS2:RespConsultaDetalle>
+    </NS1:Body>
+</NS1:Envelope>

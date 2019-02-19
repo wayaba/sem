@@ -34,7 +34,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-   this.elasticService.getAllHits().subscribe(
+   this.elasticService.getByParams("*","*","*","*","*","*").subscribe(
      data => {console.log(data); this.rowData = data.body.hits.hits},
      error => console.log('ops!', error)
     );
@@ -49,6 +49,4 @@ export class AppComponent {
       error => console.log('ops!', error)
      );
   }
-
-
 }

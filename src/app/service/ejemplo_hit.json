@@ -1,0 +1,48 @@
+{
+    "_index": "lemu-general-2019.01.21",
+    "_type": "_doc",
+    "_id": "iOG2cWgBCNGyXF9u9fWn",
+    "_score": 8.439361,
+    "_source": {
+      "beat": {
+        "version": "6.4.3",
+        "hostname": "DASOA-01",
+        "name": "DASOA-01"
+      },
+      "soa_broker_timestamp": "2019-01-21T18:40:35.129Z",
+      "Ori_msg": "2019-01-21 15:40:35,078 INFO TarjetaDebito.consultaDetalle.Interface.response broker_timestamp:2019-01-21 15:40:35.12997, tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, caller_tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+      "soa_tags": "response",
+      "tags": [
+        "soalog",
+        "supervielle",
+        "beats_input_codec_plain_applied"
+      ],
+      "soa_internal_component": "Interface",
+      "soa_raw_payload": "PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+      "soa_payload": """<NS1:Envelope xmlns:NS1="http://schemas.xmlsoap.org/soap/envelope/"><NS1:Header><NS2:soapHeaderRes xmlns:NS2="http://www.supervielle.com.ar/xsd/Integracion/Header-v1"><txId>INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5</txId><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext><ResponseData><Status>SUCCESS</Status></ResponseData></NS2:soapHeaderRes></NS1:Header><NS1:Body><NS2:RespConsultaDetalle xmlns:NS2="http://www.supervielle.com.ar/xsd/Integracion/tarjetaDebito/consultaDetalle-v1"><Data><Row><identificador dataTypeName="PLAN SUELDO"><idTarjeta>4517720262350938   </idTarjeta></identificador><titular dataTypeName="IdClienteType"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016    </numDoc></titular><tipoTarjeta><codigo>P</codigo><descripcion>PLAN SUELDO</descripcion></tipoTarjeta><estado><codigo>1</codigo><descripcion>Activa</descripcion></estado><cantExtraccionesATM>0</cantExtraccionesATM><cantDepositosATM>0</cantDepositosATM><limiteCompra>800.00</limiteCompra><limiteExtraccion>700.00</limiteExtraccion><vencimiento>2023-08-01</vencimiento><cantCompras>0</cantCompras></Row></Data></NS2:RespConsultaDetalle></NS1:Body></NS1:Envelope>""",
+      "@timestamp": "2019-01-21T18:40:35.078Z",
+      "soa_resource": "TarjetaDebito",
+      "soa_event": "INFO",
+      "ip_SRC": "10.241.241.14",
+      "soa_token": "SVCDYNMCRMSOADESA",
+      "message": "2019-01-21 15:40:35,078 INFO TarjetaDebito.consultaDetalle.Interface.response broker_timestamp:2019-01-21 15:40:35.12997, tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, caller_tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+      "input": {
+        "type": "log"
+      },
+      "soa_host_source": "10.241.241.14",
+      "soa_tx_id": "INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5",
+      "soa_caller_tx_id": "INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5",
+      "source": """E:\BROKERS\elastic\logs\EG-TarjetaDebito.log""",
+      "soa_canal_id": "CRM",
+      "offset": 10911140,
+      "soa_method": "consultaDetalle",
+      "indice": "lemu-general",
+      "host": {
+        "name": "DASOA-01"
+      },
+      "prospector": {
+        "type": "log"
+      },
+      "@version": "1"
+    }
+  }

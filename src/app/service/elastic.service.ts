@@ -9,18 +9,7 @@ import { Observable } from 'rxjs';
 export class ElasticService {
 
   private baseUrl = "http://10.241.169.67:9200";
-  /*
-  private httpRequestBody : any = {
-    "query": {
-      "query_string": {
-        "query": "(soa_method:ConsultaListadoCuentas)",
-        "analyze_wildcard": true,
-        "default_field": "*"
-      }
-    }
-  }
-  */
-
+  
   constructor(private http : HttpClient) { }
 
   public getHitsByMethod(method: string): Observable<HttpResponse<any>> {
@@ -64,14 +53,13 @@ export class ElasticService {
 
     return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
-  /*
   // Desarrollo en curso
-  public getHitsByPerson(): Observable<HttpResponse<any>> {
+  public getHitsByPerson(paisOrigen: number, tipoDoc: number, numDoc: number): Observable<HttpResponse<any>> {
 
     let requestBody : any = { 
       "query": {
         "query_string": {
-          "query": `(soa_method: ${})`,
+          "query": `(_source.soa_payload: *<paisOrigen>${paisOrigen}</paisOrigen><tipoDoc>${tipoDoc}</tipoDoc><numDoc>${numDoc}    </numDoc>*)`,
           "analyze_wildcard": true,
           "default_field": "*"
         }
@@ -80,5 +68,27 @@ export class ElasticService {
 
     return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
-  */
+
+  public getByParams(
+    method: string = "*",
+    sessionId: string = "*",
+    timeStamp: string = "*",
+    paisOrigen: any = "*",
+    tipoDoc: any = "*",
+    numDoc: any = "*"): Observable<HttpResponse<any>>{
+
+      let requestBody: any = {
+        "query": {
+          "query_string": {
+            "query": `(_source.soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (_source.soa_broker_timestamp: ${ timeStamp }) AND (_source.soa_method: ${ method })AND (_source.message: session_id\\:${ sessionId })`,
+            "analyze_wildcard": true,
+            "default_field": "*"
+          }
+        }
+       }
+
+       console.log(requestBody);
+
+      return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
 }
