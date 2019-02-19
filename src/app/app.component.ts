@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.callElastikService('', '');
+    this.callElastikService('', '', '');
   }
 
   onSubmit() {
