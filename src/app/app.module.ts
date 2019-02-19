@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OwlDateTimeModule, OwlNativeDateTimeModule, OWL_DATE_TIME_FORMATS } from 'ng-pick-datetime';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgxUiLoaderModule } from  'ngx-ui-loader';
 
 // learn more about this from
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
@@ -30,6 +31,7 @@ export const MY_NATIVE_FORMATS = {
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     BrowserAnimationsModule,
+    NgxUiLoaderModule,
     AgGridModule.withComponents([])],
     providers: [
       {provide: OWL_DATE_TIME_FORMATS, useValue: MY_NATIVE_FORMATS},

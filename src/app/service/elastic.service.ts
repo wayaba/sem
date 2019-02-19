@@ -87,8 +87,9 @@ export class ElasticService {
 
   public getByParams(
     method: string = "*",
-    sessionId: string = "*",
     timeStamp: string = "*",
+    txid: string = "*",
+    sessionId: string = "*",
     paisOrigen: any = "*",
     tipoDoc: any = "*",
     numDoc: any = "*",
@@ -98,12 +99,13 @@ export class ElasticService {
     method = (method == '')? '*':method;
     timeStamp = (timeStamp == '')? '*':timeStamp;
     sessionId = (sessionId == '')? '*':sessionId;
+    txid = (txid == '')? '*':txid;
 
       let requestBody: any = {
         "from" : startPage ,"size" : limitPage, 
         "query": {
           "query_string": {
-            "query": `(soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (soa_broker_timestamp: ${ timeStamp }) AND (soa_method: ${ method })AND (message: session_id\\:${ sessionId })`,
+            "query": `(soa_payload: *<paisOrigen>${ paisOrigen }<\\/paisOrigen><tipoDoc>${ tipoDoc }<\\/tipoDoc><numDoc>${ numDoc }    <\\/numDoc>*) AND (soa_broker_timestamp: ${ timeStamp }) AND (soa_method: ${ method }) AND (soa_tx_id: ${ txid }) AND (message: session_id\\:${ sessionId })`,
             "analyze_wildcard": true,
             "default_field": "*"
           }

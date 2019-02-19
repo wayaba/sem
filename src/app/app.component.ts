@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
 import * as moment from 'moment'
 
 @Component({
@@ -12,19 +13,20 @@ export class AppComponent {
   title = 'sem';
 
   columnDefs = [
-    {headerName: 'Canal', field: '_source.soa_canal_id', sortable: true, filter: true,  width: 150},
-    {headerName: 'Recurso', field: '_source.soa_resource', sortable: true, filter: true, width: 140},
-    {headerName: 'TX ID', field: '_source.soa_tx_id', sortable: true, filter: true, width: 200},
-    {headerName: 'Metodo', field: '_source.soa_method', sortable: true, filter: true, width: 200},
-    {headerName: 'Fecha', field: '_source.@timestamp', sortable: true, filter: true, width: 220},
-    {headerName: 'Fecha SOA', field: '_source.soa_broker_timestamp', sortable: true, filter: true, width: 220},
-    
+    {headerName: 'Canal', field: '_source.soa_canal_id', editable:true, sortable: true, filter: true,  width: 150},
+    {headerName: 'Recurso', field: '_source.soa_resource', editable:true, sortable: true, filter: true, width: 140},
+    {headerName: 'TX ID', field: '_source.soa_tx_id', editable:true, sortable: true, filter: true, width: 200},
+    {headerName: 'Metodo', field: '_source.soa_method', editable:true, sortable: true, filter: true, width: 200},
+    {headerName: 'Fecha', field: '_source.@timestamp', editable:true, sortable: true, filter: true, width: 220},
+    {headerName: 'Fecha SOA', field: '_source.soa_broker_timestamp', editable:true, sortable: true, filter: true, width: 220},
+    {headerName: 'Payload', field: '_source.soa_payload', editable:true, sortable: true, filter: true, width: 220},
   ];
 
   rowData: any;
   data: any = {};
 
-  constructor(private elasticService : ElasticService) {
+  constructor(private elasticService : ElasticService,
+    private ngxService: NgxUiLoaderService) {
 
   }
 
@@ -37,9 +39,14 @@ export class AppComponent {
     
     let filter_method = '';
     let filter_date = '';
-    
-    if(this.data.date != null){
+    let filter_txid = '';
+
+    if(this.data.method != null){
       filter_method  = this.data.method;
+    }
+
+    if(this.data.txid != null){
+      filter_txid  = this.data.txid;
     }
 
     if(this.data.date != null){
@@ -49,16 +56,22 @@ export class AppComponent {
 
     console.log('filtro metodo: ', filter_method);
     console.log('filtro fecha: ', filter_date);
-    this.callElastikService(filter_method, filter_date);
+    console.log('filtro txid: ', filter_txid);
+    this.callElastikService(filter_method, filter_date, filter_txid);
   }
 
-  callElastikService(filter_method : string, filter_date : string){
-    this.elasticService.getByParams(filter_method, '' ,filter_date).subscribe(
-      data => { 
+  callElastikService(filter_method : string, filter_date : string, filter_txid : string){
+    this.ngxService.start();
+    this.elasticService.getByParams(filter_method, filter_date, filter_txid).subscribe(
+      data => {           
           console.log('Respuesta Servicio: ', data);
           this.rowData = data.body.hits.hits;
+          this.ngxService.stop();
         },
-      error => console.log('ops!', error)
+      error => {
+        console.log('ops!', error);
+        this.ngxService.stop();
+       }
      );
   }
 
