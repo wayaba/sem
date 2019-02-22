@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
-import * as moment from 'moment'
+import * as moment from 'moment';
+import { Search } from './model/search';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,15 @@ export class AppComponent {
 
   rowData: any;
   data: any = {};
+  search: Search = {
+    session_id: '',
+    method: '',
+    date: '',
+    txid: '',
+    country: '',
+    doc_type: '',
+    doc_number: ''
+  };
 
   constructor(private elasticService : ElasticService,
     private ngxService: NgxUiLoaderService) {
@@ -31,38 +41,18 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.callElastikService('', '', '');
+    this.callElastikService();
   }
 
   onSubmit() {
-    console.log('Filtro por el metodo', this.data)
-    
-    let filter_method = '';
-    let filter_date = '';
-    let filter_txid = '';
-
-    if(this.data.method != null){
-      filter_method  = this.data.method;
-    }
-
-    if(this.data.txid != null){
-      filter_txid  = this.data.txid;
-    }
-
-    if(this.data.date != null){
-      let d = new Date(this.data.date);
-      filter_date = moment(d).format('YYYY-MM-DD');
-    }
-
-    console.log('filtro metodo: ', filter_method);
-    console.log('filtro fecha: ', filter_date);
-    console.log('filtro txid: ', filter_txid);
-    this.callElastikService(filter_method, filter_date, filter_txid);
+    console.log('Filtros', this.search)
+    this.callElastikService();
   }
 
-  callElastikService(filter_method : string, filter_date : string, filter_txid : string){
+  callElastikService(){
     this.ngxService.start();
-    this.elasticService.getByParams(filter_method, filter_date, filter_txid).subscribe(
+    let objSearch = Object.assign({}, this.search);
+    this.elasticService.getByParams(objSearch).subscribe(
       data => {           
           console.log('Respuesta Servicio: ', data);
           this.rowData = data.body.hits.hits;
@@ -73,6 +63,16 @@ export class AppComponent {
         this.ngxService.stop();
        }
      );
+  }
+
+  cleanFilter(){
+    this.search.country = '';
+    this.search.date = '';
+    this.search.doc_number = '';
+    this.search.doc_type = '';
+    this.search.method = '';
+    this.search.session_id = '';
+    this.search.txid = '';
   }
 
 }

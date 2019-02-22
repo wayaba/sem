@@ -7,36 +7,36 @@
           <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form group col-xs-6">
               <label for="txid">SOA TX ID</label>
-              <input id="txid" name="txid" class="form-control" [(ngModel)]="data.txid" autocomplete="off"/>
+              <input id="txid" name="txid" class="form-control" [(ngModel)]="search.txid" autocomplete="off"/>
             </div>
             <div class="form group col-xs-6">
               <label for="session_id">Session ID</label>
-              <input id="session_id" name="session_id" class="form-control" [(ngModel)]="data.session_id" autocomplete="off"/>
+              <input id="session_id" name="session_id" class="form-control" [(ngModel)]="search.session_id" autocomplete="off"/>
             </div>
             <div class="form group col-xs-6">
               <label for="method">Método</label>
-              <input id="method" name="method" class="form-control" [(ngModel)]="data.method" autocomplete="off"/>
+              <input id="method" name="method" class="form-control" [(ngModel)]="search.method" autocomplete="off"/>
             </div>
             <div class="form group col-xs-6">
               <label for="date">Fecha</label>
-              <input class="form-control" id="date" name="date" [owlDateTimeTrigger]="date" [owlDateTime]="date" placeholder="Fecha"  [(ngModel)]="data.date">
+              <input class="form-control" id="date" name="date" [owlDateTimeTrigger]="date" [owlDateTime]="date" placeholder="Fecha"  [(ngModel)]="search.date">
               <owl-date-time [pickerType]="'calendar'" #date></owl-date-time>
             </div>       
             <div class="form group col-xs-3">
               <label for="country">País de origen</label>
-              <input id="country" name="country" class="form-control" [(ngModel)]="data.country" autocomplete="off"/>
+              <input id="country" name="country" class="form-control" [(ngModel)]="search.country" autocomplete="off"/>
             </div>
             <div class="form group col-xs-2">
               <label for="doc_type">Tipo</label>
-              <input id="doc_type" name="doc_type" class="form-control" [(ngModel)]="data.doc_type" autocomplete="off"/>
+              <input id="doc_type" name="doc_type" class="form-control" [(ngModel)]="search.doc_type" autocomplete="off"/>
             </div>
             <div class="form group col-xs-4">
-              <label for="number">Número</label>
-              <input id="number" name="number" class="form-control" [(ngModel)]="data.number" autocomplete="off"/>
+              <label for="doc_number">Número</label>
+              <input id="doc_number" name="doc_number" class="form-control" [(ngModel)]="search.doc_number" autocomplete="off"/>
             </div>
             <div class="btn-group col-xs-12">
-              <button class="btn btn-success" [disabled]="f.form.pristine || f.form.invalid">Buscar</button>
-              <button class="btn btn-primary" (click)="f.reset();false;">Limpiar Filtros</button>
+              <button class="btn btn-success">Buscar</button>
+              <button class="btn btn-primary" (click)="cleanFilter();">Limpiar Filtros</button>
             </div>    
           </form>
         </div>
