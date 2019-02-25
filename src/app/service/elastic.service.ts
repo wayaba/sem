@@ -51,7 +51,7 @@ export class ElasticService {
       "query": {
         "query_string": {
           "query": `
-            (soa_payload:\" ${ payloadFilter }\") 
+            (soa_payload: ${ objSearch.soa_payload }) 
             AND (soa_broker_timestamp: ${ objSearch.date }) 
             AND (soa_method:\" ${ objSearch.method }\") 
             AND (soa_tx_id:\" ${ objSearch.txid }\")`,         
@@ -76,6 +76,38 @@ export class ElasticService {
     objSearch.country = (objSearch.country == '')? '*':objSearch.country;   
     objSearch.doc_type = (objSearch.doc_type == '')? '*':objSearch.doc_type;   
     objSearch.doc_number = (objSearch.doc_number == '')? '*':objSearch.doc_number;
+
+    let payloadFilter : string = '*';
+    let hasCountry: boolean = false;
+    let hasType: boolean = false;
+
+    if(objSearch.country != '*'){
+      let country = Number(objSearch.country);
+      payloadFilter = "(\"<paisOrigen>" + country + "\" OR \"<paisOrigen>0" + country + "\")";
+      hasCountry = true;
+    }
+
+    if(objSearch.doc_type != '*'){      
+      let doc_type = Number(objSearch.doc_type);
+      if(hasCountry){
+        payloadFilter = payloadFilter + ' AND ';
+        payloadFilter = payloadFilter + "(\"<tipoDoc>" + doc_type + "\" OR \"<tipoDoc>0" + doc_type + "\")";
+      }else{
+        payloadFilter = "(\"<tipoDoc>" + doc_type + "\" OR \"<tipoDoc>0" + doc_type + "\")";
+      }
+      hasType = true;
+    }
+
+    if(objSearch.doc_number != '*'){
+      if(hasCountry || hasType){
+        payloadFilter = payloadFilter + ' AND ';
+        payloadFilter = payloadFilter + "(\"<numDoc>" + objSearch.doc_number + "\")";
+      }else{
+        payloadFilter = "(\"<numDoc>" + objSearch.doc_number + "\")";  
+      }
+    }    
+
+    objSearch.soa_payload = payloadFilter;
 
     if(objSearch.date != "*"){
       let d = new Date(objSearch.date);

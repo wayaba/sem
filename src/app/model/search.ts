@@ -6,4 +6,5 @@ export class Search {
     country: string = '';
     doc_type: string = '';
     doc_number: string = '';
+    soa_payload: string = '';
 }

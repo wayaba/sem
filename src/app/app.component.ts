@@ -32,7 +32,8 @@ export class AppComponent {
     txid: '',
     country: '',
     doc_type: '',
-    doc_number: ''
+    doc_number: '',
+    soa_payload: ''
   };
 
   constructor(private elasticService : ElasticService,
