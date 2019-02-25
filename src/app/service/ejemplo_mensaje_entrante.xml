@@ -24,7 +24,7 @@
                     <titular dataTypeName="IdClienteType">
                         <paisOrigen>80</paisOrigen>
                         <tipoDoc>4</tipoDoc>
-                        <numDoc>10848016    </numDoc>
+                        <numDoc>10848016</numDoc>
                     </titular>
                     <tipoTarjeta>
                         <codigo>P</codigo>

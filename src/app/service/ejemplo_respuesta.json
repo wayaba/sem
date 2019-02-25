@@ -1,0 +1,487 @@
+{
+    "took": 103,
+    "timed_out": false,
+    "_shards": {
+        "total": 496,
+        "successful": 496,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 54,
+        "max_score": 18.821342,
+        "hits": [
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "sNe2cWgBxLcUCgyS50_s",
+                "_score": 18.821342,
+                "_source": {
+                    "@version": "1",
+                    "soa_internal_component": "Interface",
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.814Z",
+                    "soa_canal_id": "CRM",
+                    "indice": "lemu-general",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "@timestamp": "2019-01-21T18:40:35.766Z",
+                    "soa_method": "consultaComitente",
+                    "input": {
+                        "type": "log"
+                    },
+                    "soa_event": "INFO",
+                    "soa_resource": "Inversiones",
+                    "soa_tx_id": "INTBK_01:ad7e6111-f468-45ad-a8a9-fccee2742807",
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "soa_tags": "request",
+                    "soa_host_source": "10.241.241.14",
+                    "Ori_msg": "2019-01-21 15:40:35,766 INFO Inversiones.consultaComitente.Interface.request broker_timestamp:2019-01-21 15:40:35.81430, tx_id:INTBK_01:ad7e6111-f468-45ad-a8a9-fccee2742807, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "message": "2019-01-21 15:40:35,766 INFO Inversiones.consultaComitente.Interface.request broker_timestamp:2019-01-21 15:40:35.81430, tx_id:INTBK_01:ad7e6111-f468-45ad-a8a9-fccee2742807, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "ip_SRC": "10.241.241.14",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Inversiones.log",
+                    "beat": {
+                        "hostname": "DASOA-01",
+                        "version": "6.4.3",
+                        "name": "DASOA-01"
+                    },
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/integracion/inversiones/consultaComitente-v1\"><Context operation=\"consultaComitente\" operationType=\"REQUEST_RESPONSE\" portType=\"InversionesPortType-v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/Integracion/inversiones-v1\" port=\"InversionesSvc\" service=\"Inversiones\" fileName=\"Inversiones_MS_v1.0/ar/com/supervielle/www/wsdl/integracion/inversionesv1/Inversiones_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/integracion/inversiones/consultaComitente-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaComitente><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaComitente></Body></SOAP_Domain_Msg>",
+                    "offset": 209921090
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "bOG2cWgBCNGyXF9u6PVW",
+                "_score": 18.821342,
+                "_source": {
+                    "beat": {
+                        "version": "6.4.3",
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01"
+                    },
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.443Z",
+                    "Ori_msg": "2019-01-21 15:40:35,396 INFO Inversiones.consultaComitente.Interface.request broker_timestamp:2019-01-21 15:40:35.44327, tx_id:INTBK_01:6247cb4a-fe1c-49b9-93dd-ab0dd4a7bcf8, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_tags": "request",
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_internal_component": "Interface",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/integracion/inversiones/consultaComitente-v1\"><Context operation=\"consultaComitente\" operationType=\"REQUEST_RESPONSE\" portType=\"InversionesPortType-v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/Integracion/inversiones-v1\" port=\"InversionesSvc\" service=\"Inversiones\" fileName=\"Inversiones_MS_v1.0/ar/com/supervielle/www/wsdl/integracion/inversionesv1/Inversiones_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/integracion/inversiones/consultaComitente-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaComitente><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaComitente></Body></SOAP_Domain_Msg>",
+                    "@timestamp": "2019-01-21T18:40:35.396Z",
+                    "soa_resource": "Inversiones",
+                    "soa_event": "INFO",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "message": "2019-01-21 15:40:35,396 INFO Inversiones.consultaComitente.Interface.request broker_timestamp:2019-01-21 15:40:35.44327, tx_id:INTBK_01:6247cb4a-fe1c-49b9-93dd-ab0dd4a7bcf8, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXMvY29uc3VsdGFDb21pdGVudGUtdjEiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFDb21pdGVudGUiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJJbnZlcnNpb25lc1BvcnRUeXBlLXYxIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9JbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy12MSIgcG9ydD0iSW52ZXJzaW9uZXNTdmMiIHNlcnZpY2U9IkludmVyc2lvbmVzIiBmaWxlTmFtZT0iSW52ZXJzaW9uZXNfTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvaW50ZWdyYWNpb24vaW52ZXJzaW9uZXN2MS9JbnZlcnNpb25lc19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9pbnRlZ3JhY2lvbi9pbnZlcnNpb25lcy9jb25zdWx0YUNvbWl0ZW50ZS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFDb21pdGVudGU+PERhdGE+PGlkZW50aWZpY2Fkb3IgZGF0YVR5cGVOYW1lPSJJZENsaWVudGVUeXBlIj48cGFpc09yaWdlbj44MDwvcGFpc09yaWdlbj48dGlwb0RvYz40PC90aXBvRG9jPjxudW1Eb2M+MTA4NDgwMTY8L251bURvYz48L2lkZW50aWZpY2Fkb3I+PC9EYXRhPjwvY29uOlJlcUNvbnN1bHRhQ29taXRlbnRlPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "input": {
+                        "type": "log"
+                    },
+                    "soa_host_source": "10.241.241.14",
+                    "soa_tx_id": "INTBK_01:6247cb4a-fe1c-49b9-93dd-ab0dd4a7bcf8",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Inversiones.log",
+                    "soa_canal_id": "CRM",
+                    "offset": 209914950,
+                    "soa_method": "consultaComitente",
+                    "indice": "lemu-general",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "jYS2cWgB4NqY2Zd47vHJ",
+                "_score": 18.821342,
+                "_source": {
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "soa_internal_component": "Interface",
+                    "soa_resource": "TarjetaCredito",
+                    "soa_tags": "request",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-TarjetaCredito.log",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_host_source": "10.241.241.14",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.801Z",
+                    "soa_event": "INFO",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "indice": "lemu-general",
+                    "beat": {
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "soa_method": "consultaListadoCuentas",
+                    "@version": "1",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListadoCuentas-v1\"><Context operation=\"consultaListadoCuentas\" operationType=\"REQUEST_RESPONSE\" portType=\"TarjetaCreditoPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1\" port=\"TarjetaCreditoSvc\" service=\"TarjetaCredito\" fileName=\"TarjetaCredito_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/tarjetacreditov1/TarjetaCredito_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListadoCuentas-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoCuentas><Data><Identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></Identificador></Data></con:ReqConsultaListadoCuentas></Body></SOAP_Domain_Msg>",
+                    "offset": 194911792,
+                    "soa_tx_id": "INTBK_01:c5e9dd78-2bdd-4d1f-b5f9-613af4a76943",
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "Ori_msg": "2019-01-21 15:40:35,750 INFO TarjetaCredito.consultaListadoCuentas.Interface.request broker_timestamp:2019-01-21 15:40:35.80150, tx_id:INTBK_01:c5e9dd78-2bdd-4d1f-b5f9-613af4a76943, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2019-01-21T18:40:35.750Z",
+                    "message": "2019-01-21 15:40:35,750 INFO TarjetaCredito.consultaListadoCuentas.Interface.request broker_timestamp:2019-01-21 15:40:35.80150, tx_id:INTBK_01:c5e9dd78-2bdd-4d1f-b5f9-613af4a76943, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "soa_canal_id": "CRM"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "cuG2cWgBCNGyXF9u7_U0",
+                "_score": 18.821342,
+                "_source": {
+                    "beat": {
+                        "version": "6.4.3",
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01"
+                    },
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.840Z",
+                    "Ori_msg": "2019-01-21 15:40:35,789 INFO TarjetaCredito.consultaListado.Interface.request broker_timestamp:2019-01-21 15:40:35.84050, tx_id:INTBK_01:f49d185f-e8ab-48d3-ae51-41b6b5b10d73, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFMaXN0YWRvIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MS4yIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8tdjEiIHBvcnQ9IlRhcmpldGFDcmVkaXRvU3ZjX3YxLjIiIHNlcnZpY2U9IlRhcmpldGFDcmVkaXRvIiBmaWxlTmFtZT0iVGFyamV0YUNyZWRpdG9fTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFjcmVkaXRvdjEvVGFyamV0YUNyZWRpdG9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiLz48X1htbERlY2xhcmF0aW9uIFZlcnNpb249IjEuMCIgRW5jb2Rpbmc9InV0Zi04Ii8+PC9Db250ZXh0PjxIZWFkZXI+PGhlYWQ6c29hcEhlYWRlclJlcT48c2Vzc2lvbkNvbnRleHQ+PHNlc3Npb24+PHVzZXJOYW1lPnN2Y2R5bm1jcm1hZG1pbmRlc2E8L3VzZXJOYW1lPjxzeXN0ZW1JZD5DUk08L3N5c3RlbUlkPjxjYW5hbElEPkNSTTwvY2FuYWxJRD48L3Nlc3Npb24+PC9zZXNzaW9uQ29udGV4dD48L2hlYWQ6c29hcEhlYWRlclJlcT48L0hlYWRlcj48Qm9keT48Y29uOlJlcUNvbnN1bHRhTGlzdGFkbz48RGF0YT48aWRlbnRpZmljYWRvciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNjwvbnVtRG9jPjwvaWRlbnRpZmljYWRvcj48L0RhdGE+PC9jb246UmVxQ29uc3VsdGFMaXN0YWRvPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_tags": "request",
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_internal_component": "Interface",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFMaXN0YWRvIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MS4yIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8tdjEiIHBvcnQ9IlRhcmpldGFDcmVkaXRvU3ZjX3YxLjIiIHNlcnZpY2U9IlRhcmpldGFDcmVkaXRvIiBmaWxlTmFtZT0iVGFyamV0YUNyZWRpdG9fTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFjcmVkaXRvdjEvVGFyamV0YUNyZWRpdG9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiLz48X1htbERlY2xhcmF0aW9uIFZlcnNpb249IjEuMCIgRW5jb2Rpbmc9InV0Zi04Ii8+PC9Db250ZXh0PjxIZWFkZXI+PGhlYWQ6c29hcEhlYWRlclJlcT48c2Vzc2lvbkNvbnRleHQ+PHNlc3Npb24+PHVzZXJOYW1lPnN2Y2R5bm1jcm1hZG1pbmRlc2E8L3VzZXJOYW1lPjxzeXN0ZW1JZD5DUk08L3N5c3RlbUlkPjxjYW5hbElEPkNSTTwvY2FuYWxJRD48L3Nlc3Npb24+PC9zZXNzaW9uQ29udGV4dD48L2hlYWQ6c29hcEhlYWRlclJlcT48L0hlYWRlcj48Qm9keT48Y29uOlJlcUNvbnN1bHRhTGlzdGFkbz48RGF0YT48aWRlbnRpZmljYWRvciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNjwvbnVtRG9jPjwvaWRlbnRpZmljYWRvcj48L0RhdGE+PC9jb246UmVxQ29uc3VsdGFMaXN0YWRvPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.2\"><Context operation=\"consultaListado\" operationType=\"REQUEST_RESPONSE\" portType=\"TarjetaCreditoPortType_v1.2\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1\" port=\"TarjetaCreditoSvc_v1.2\" service=\"TarjetaCredito\" fileName=\"TarjetaCredito_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/tarjetacreditov1/TarjetaCredito_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListado-v1.2\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListado><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaListado></Body></SOAP_Domain_Msg>",
+                    "@timestamp": "2019-01-21T18:40:35.789Z",
+                    "soa_resource": "TarjetaCredito",
+                    "soa_event": "INFO",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "message": "2019-01-21 15:40:35,789 INFO TarjetaCredito.consultaListado.Interface.request broker_timestamp:2019-01-21 15:40:35.84050, tx_id:INTBK_01:f49d185f-e8ab-48d3-ae51-41b6b5b10d73, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiPjxDb250ZXh0IG9wZXJhdGlvbj0iY29uc3VsdGFMaXN0YWRvIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MS4yIiBwb3J0VHlwZU5hbWVzcGFjZT0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8tdjEiIHBvcnQ9IlRhcmpldGFDcmVkaXRvU3ZjX3YxLjIiIHNlcnZpY2U9IlRhcmpldGFDcmVkaXRvIiBmaWxlTmFtZT0iVGFyamV0YUNyZWRpdG9fTVNfdjEuMC9hci9jb20vc3VwZXJ2aWVsbGUvd3d3L3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFjcmVkaXRvdjEvVGFyamV0YUNyZWRpdG9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvLXYxLjIiLz48X1htbERlY2xhcmF0aW9uIFZlcnNpb249IjEuMCIgRW5jb2Rpbmc9InV0Zi04Ii8+PC9Db250ZXh0PjxIZWFkZXI+PGhlYWQ6c29hcEhlYWRlclJlcT48c2Vzc2lvbkNvbnRleHQ+PHNlc3Npb24+PHVzZXJOYW1lPnN2Y2R5bm1jcm1hZG1pbmRlc2E8L3VzZXJOYW1lPjxzeXN0ZW1JZD5DUk08L3N5c3RlbUlkPjxjYW5hbElEPkNSTTwvY2FuYWxJRD48L3Nlc3Npb24+PC9zZXNzaW9uQ29udGV4dD48L2hlYWQ6c29hcEhlYWRlclJlcT48L0hlYWRlcj48Qm9keT48Y29uOlJlcUNvbnN1bHRhTGlzdGFkbz48RGF0YT48aWRlbnRpZmljYWRvciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNjwvbnVtRG9jPjwvaWRlbnRpZmljYWRvcj48L0RhdGE+PC9jb246UmVxQ29uc3VsdGFMaXN0YWRvPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "input": {
+                        "type": "log"
+                    },
+                    "soa_host_source": "10.241.241.14",
+                    "soa_tx_id": "INTBK_01:f49d185f-e8ab-48d3-ae51-41b6b5b10d73",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-TarjetaCredito.log",
+                    "soa_canal_id": "CRM",
+                    "offset": 194918004,
+                    "soa_method": "consultaListado",
+                    "indice": "lemu-general",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "4-lYmmgBxLcUCgySHATv",
+                "_score": 18.821342,
+                "_source": {
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"><Context operation=\"consultaListadoPoliza\" operationType=\"REQUEST_RESPONSE\" portType=\"SeguroPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/seguro-v1\" port=\"SeguroSvc\" service=\"Seguro\" fileName=\"SE.Seguros_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/segurov1/Seguro_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoPoliza><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaListadoPoliza></Body></SOAP_Domain_Msg>",
+                    "soa_event": "INFO",
+                    "input": {
+                        "type": "log"
+                    },
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "soa_tx_id": "INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.442Z",
+                    "@timestamp": "2019-01-21T18:40:35.395Z",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_host_source": "10.241.241.14",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Seguros.log",
+                    "indice": "lemu-general",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "Ori_msg": "2019-01-21 15:40:35,395 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.44270, tx_id:INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "message": "2019-01-21 15:40:35,395 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.44270, tx_id:INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "beat": {
+                        "name": "DASOA-01",
+                        "hostname": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "ip_SRC": "10.241.241.14",
+                    "soa_method": "consultaListadoPoliza",
+                    "@version": "1",
+                    "soa_canal_id": "CRM",
+                    "offset": 1480504,
+                    "soa_tags": "request",
+                    "soa_resource": "Seguro",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "soa_internal_component": "Interface"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "m4S2cWgB4NqY2Zd47_HD",
+                "_score": 18.52773,
+                "_source": {
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "soa_internal_component": "Interface",
+                    "soa_resource": "TarjetaCredito",
+                    "soa_tags": "request",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-TarjetaCredito.log",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_host_source": "10.241.241.14",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.402Z",
+                    "soa_event": "INFO",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "indice": "lemu-general",
+                    "beat": {
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "soa_method": "consultaListadoCuentas",
+                    "@version": "1",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListadoCuentas-v1\"><Context operation=\"consultaListadoCuentas\" operationType=\"REQUEST_RESPONSE\" portType=\"TarjetaCreditoPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/tarjetaCredito-v1\" port=\"TarjetaCreditoSvc\" service=\"TarjetaCredito\" fileName=\"TarjetaCredito_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/tarjetacreditov1/TarjetaCredito_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaCredito/consultaListadoCuentas-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoCuentas><Data><Identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></Identificador></Data></con:ReqConsultaListadoCuentas></Body></SOAP_Domain_Msg>",
+                    "offset": 194899485,
+                    "soa_tx_id": "INTBK_01:a4f90777-c84f-4a6d-b65e-adea91be551d",
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "Ori_msg": "2019-01-21 15:40:35,354 INFO TarjetaCredito.consultaListadoCuentas.Interface.request broker_timestamp:2019-01-21 15:40:35.40209, tx_id:INTBK_01:a4f90777-c84f-4a6d-b65e-adea91be551d, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2019-01-21T18:40:35.354Z",
+                    "message": "2019-01-21 15:40:35,354 INFO TarjetaCredito.consultaListadoCuentas.Interface.request broker_timestamp:2019-01-21 15:40:35.40209, tx_id:INTBK_01:a4f90777-c84f-4a6d-b65e-adea91be551d, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vdGFyamV0YUNyZWRpdG8vY29uc3VsdGFMaXN0YWRvQ3VlbnRhcy12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9DdWVudGFzIiBvcGVyYXRpb25UeXBlPSJSRVFVRVNUX1JFU1BPTlNFIiBwb3J0VHlwZT0iVGFyamV0YUNyZWRpdG9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3RhcmpldGFDcmVkaXRvLXYxIiBwb3J0PSJUYXJqZXRhQ3JlZGl0b1N2YyIgc2VydmljZT0iVGFyamV0YUNyZWRpdG8iIGZpbGVOYW1lPSJUYXJqZXRhQ3JlZGl0b19NU192MS4wL2FyL2NvbS9zdXBlcnZpZWxsZS93d3cvd3NkbC9zZXJ2aWNpb3MvaW50ZWdyYWNpb24vdGFyamV0YWNyZWRpdG92MS9UYXJqZXRhQ3JlZGl0b19TdmMtdjEud3NkbCI+PFNPQVBfVmVyc2lvbj4xLjE8L1NPQVBfVmVyc2lvbj48TmFtZXNwYWNlIHhtbG5zOnNvYXBlbnY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpoZWFkPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIiB4bWxuczpjb249Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3hzZC9JbnRlZ3JhY2lvbi90YXJqZXRhQ3JlZGl0by9jb25zdWx0YUxpc3RhZG9DdWVudGFzLXYxIi8+PF9YbWxEZWNsYXJhdGlvbiBWZXJzaW9uPSIxLjAiIEVuY29kaW5nPSJ1dGYtOCIvPjwvQ29udGV4dD48SGVhZGVyPjxoZWFkOnNvYXBIZWFkZXJSZXE+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PC9oZWFkOnNvYXBIZWFkZXJSZXE+PC9IZWFkZXI+PEJvZHk+PGNvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjxEYXRhPjxJZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9JZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9DdWVudGFzPjwvQm9keT48L1NPQVBfRG9tYWluX01zZz4=",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "soa_canal_id": "CRM"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "-YgHe2gB4NqY2Zd4Pi1-",
+                "_score": 18.52773,
+                "_source": {
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "soa_internal_component": "Interface",
+                    "soa_resource": "Seguro",
+                    "soa_tags": "request",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Seguros.log",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_host_source": "10.241.241.14",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.815Z",
+                    "soa_event": "INFO",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "indice": "lemu-general",
+                    "beat": {
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "soa_method": "consultaListadoPoliza",
+                    "@version": "1",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"><Context operation=\"consultaListadoPoliza\" operationType=\"REQUEST_RESPONSE\" portType=\"SeguroPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/seguro-v1\" port=\"SeguroSvc\" service=\"Seguro\" fileName=\"SE.Seguros_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/segurov1/Seguro_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoPoliza><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaListadoPoliza></Body></SOAP_Domain_Msg>",
+                    "offset": 1487385,
+                    "soa_tx_id": "INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70",
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "Ori_msg": "2019-01-21 15:40:35,766 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.81538, tx_id:INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2019-01-21T18:40:35.766Z",
+                    "message": "2019-01-21 15:40:35,766 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.81538, tx_id:INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "soa_canal_id": "CRM"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "_-lYmmgBxLcUCgySHATx",
+                "_score": 18.39962,
+                "_source": {
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"><Context operation=\"consultaListadoPoliza\" operationType=\"REQUEST_RESPONSE\" portType=\"SeguroPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/seguro-v1\" port=\"SeguroSvc\" service=\"Seguro\" fileName=\"SE.Seguros_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/segurov1/Seguro_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoPoliza><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaListadoPoliza></Body></SOAP_Domain_Msg>",
+                    "soa_event": "INFO",
+                    "input": {
+                        "type": "log"
+                    },
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "soa_tx_id": "INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.815Z",
+                    "@timestamp": "2019-01-21T18:40:35.766Z",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_host_source": "10.241.241.14",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Seguros.log",
+                    "indice": "lemu-general",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "Ori_msg": "2019-01-21 15:40:35,766 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.81538, tx_id:INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "message": "2019-01-21 15:40:35,766 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.81538, tx_id:INTBK_01:74da2b87-657e-4f48-ae9d-b879b51a2c70, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "beat": {
+                        "name": "DASOA-01",
+                        "hostname": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "ip_SRC": "10.241.241.14",
+                    "soa_method": "consultaListadoPoliza",
+                    "@version": "1",
+                    "soa_canal_id": "CRM",
+                    "offset": 1487385,
+                    "soa_tags": "request",
+                    "soa_resource": "Seguro",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "soa_internal_component": "Interface"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "E4gHe2gB4NqY2Zd4Pi5_",
+                "_score": 18.39962,
+                "_source": {
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "soa_internal_component": "Interface",
+                    "soa_resource": "Seguro",
+                    "soa_tags": "request",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-Seguros.log",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_host_source": "10.241.241.14",
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.442Z",
+                    "soa_event": "INFO",
+                    "soa_raw_payload": "PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "indice": "lemu-general",
+                    "beat": {
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01",
+                        "version": "6.4.3"
+                    },
+                    "soa_method": "consultaListadoPoliza",
+                    "@version": "1",
+                    "soa_payload": "<SOAP_Domain_Msg xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"><Context operation=\"consultaListadoPoliza\" operationType=\"REQUEST_RESPONSE\" portType=\"SeguroPortType_v1\" portTypeNamespace=\"http://www.supervielle.com.ar/wsdl/servicios/integracion/seguro-v1\" port=\"SeguroSvc\" service=\"Seguro\" fileName=\"SE.Seguros_MS_v1.0/ar/com/supervielle/www/wsdl/servicios/integracion/segurov1/Seguro_Svc-v1.wsdl\"><SOAP_Version>1.1</SOAP_Version><Namespace xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:head=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\" xmlns:con=\"http://www.supervielle.com.ar/xsd/Integracion/seguro/consultaListadoPoliza-v1\"/><_XmlDeclaration Version=\"1.0\" Encoding=\"utf-8\"/></Context><Header><head:soapHeaderReq><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext></head:soapHeaderReq></Header><Body><con:ReqConsultaListadoPoliza><Data><identificador dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016</numDoc></identificador></Data></con:ReqConsultaListadoPoliza></Body></SOAP_Domain_Msg>",
+                    "offset": 1480504,
+                    "soa_tx_id": "INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed",
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "Ori_msg": "2019-01-21 15:40:35,395 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.44270, tx_id:INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "input": {
+                        "type": "log"
+                    },
+                    "@timestamp": "2019-01-21T18:40:35.395Z",
+                    "message": "2019-01-21 15:40:35,395 INFO Seguro.consultaListadoPoliza.Interface.request broker_timestamp:2019-01-21 15:40:35.44270, tx_id:INTBK_01:a79b227e-5516-4850-9c3c-463e3165ceed, caller_tx_id:, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PFNPQVBfRG9tYWluX01zZyB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSI+PENvbnRleHQgb3BlcmF0aW9uPSJjb25zdWx0YUxpc3RhZG9Qb2xpemEiIG9wZXJhdGlvblR5cGU9IlJFUVVFU1RfUkVTUE9OU0UiIHBvcnRUeXBlPSJTZWd1cm9Qb3J0VHlwZV92MSIgcG9ydFR5cGVOYW1lc3BhY2U9Imh0dHA6Ly93d3cuc3VwZXJ2aWVsbGUuY29tLmFyL3dzZGwvc2VydmljaW9zL2ludGVncmFjaW9uL3NlZ3Vyby12MSIgcG9ydD0iU2VndXJvU3ZjIiBzZXJ2aWNlPSJTZWd1cm8iIGZpbGVOYW1lPSJTRS5TZWd1cm9zX01TX3YxLjAvYXIvY29tL3N1cGVydmllbGxlL3d3dy93c2RsL3NlcnZpY2lvcy9pbnRlZ3JhY2lvbi9zZWd1cm92MS9TZWd1cm9fU3ZjLXYxLndzZGwiPjxTT0FQX1ZlcnNpb24+MS4xPC9TT0FQX1ZlcnNpb24+PE5hbWVzcGFjZSB4bWxuczpzb2FwZW52PSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VudmVsb3BlLyIgeG1sbnM6aGVhZD0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL0hlYWRlci12MSIgeG1sbnM6Y29uPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vc2VndXJvL2NvbnN1bHRhTGlzdGFkb1BvbGl6YS12MSIvPjxfWG1sRGVjbGFyYXRpb24gVmVyc2lvbj0iMS4wIiBFbmNvZGluZz0idXRmLTgiLz48L0NvbnRleHQ+PEhlYWRlcj48aGVhZDpzb2FwSGVhZGVyUmVxPjxzZXNzaW9uQ29udGV4dD48c2Vzc2lvbj48dXNlck5hbWU+c3ZjZHlubWNybWFkbWluZGVzYTwvdXNlck5hbWU+PHN5c3RlbUlkPkNSTTwvc3lzdGVtSWQ+PGNhbmFsSUQ+Q1JNPC9jYW5hbElEPjwvc2Vzc2lvbj48L3Nlc3Npb25Db250ZXh0PjwvaGVhZDpzb2FwSGVhZGVyUmVxPjwvSGVhZGVyPjxCb2R5Pjxjb246UmVxQ29uc3VsdGFMaXN0YWRvUG9saXphPjxEYXRhPjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iSWRDbGllbnRlVHlwZSI+PHBhaXNPcmlnZW4+ODA8L3BhaXNPcmlnZW4+PHRpcG9Eb2M+NDwvdGlwb0RvYz48bnVtRG9jPjEwODQ4MDE2PC9udW1Eb2M+PC9pZGVudGlmaWNhZG9yPjwvRGF0YT48L2NvbjpSZXFDb25zdWx0YUxpc3RhZG9Qb2xpemE+PC9Cb2R5PjwvU09BUF9Eb21haW5fTXNnPg==",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "soa_canal_id": "CRM"
+                }
+            },
+            {
+                "_index": "lemu-general-2019.01.21",
+                "_type": "_doc",
+                "_id": "iOG2cWgBCNGyXF9u9fWn",
+                "_score": 18.241186,
+                "_source": {
+                    "beat": {
+                        "version": "6.4.3",
+                        "hostname": "DASOA-01",
+                        "name": "DASOA-01"
+                    },
+                    "soa_broker_timestamp": "2019-01-21T18:40:35.129Z",
+                    "Ori_msg": "2019-01-21 15:40:35,078 INFO TarjetaDebito.consultaDetalle.Interface.response broker_timestamp:2019-01-21 15:40:35.12997, tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, caller_tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+                    "soa_tags": "response",
+                    "tags": [
+                        "soalog",
+                        "supervielle",
+                        "beats_input_codec_plain_applied"
+                    ],
+                    "soa_internal_component": "Interface",
+                    "soa_raw_payload": "PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+                    "soa_payload": "<NS1:Envelope xmlns:NS1=\"http://schemas.xmlsoap.org/soap/envelope/\"><NS1:Header><NS2:soapHeaderRes xmlns:NS2=\"http://www.supervielle.com.ar/xsd/Integracion/Header-v1\"><txId>INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5</txId><sessionContext><session><userName>svcdynmcrmadmindesa</userName><systemId>CRM</systemId><canalID>CRM</canalID></session></sessionContext><ResponseData><Status>SUCCESS</Status></ResponseData></NS2:soapHeaderRes></NS1:Header><NS1:Body><NS2:RespConsultaDetalle xmlns:NS2=\"http://www.supervielle.com.ar/xsd/Integracion/tarjetaDebito/consultaDetalle-v1\"><Data><Row><identificador dataTypeName=\"PLAN SUELDO\"><idTarjeta>4517720262350938   </idTarjeta></identificador><titular dataTypeName=\"IdClienteType\"><paisOrigen>80</paisOrigen><tipoDoc>4</tipoDoc><numDoc>10848016    </numDoc></titular><tipoTarjeta><codigo>P</codigo><descripcion>PLAN SUELDO</descripcion></tipoTarjeta><estado><codigo>1</codigo><descripcion>Activa</descripcion></estado><cantExtraccionesATM>0</cantExtraccionesATM><cantDepositosATM>0</cantDepositosATM><limiteCompra>800.00</limiteCompra><limiteExtraccion>700.00</limiteExtraccion><vencimiento>2023-08-01</vencimiento><cantCompras>0</cantCompras></Row></Data></NS2:RespConsultaDetalle></NS1:Body></NS1:Envelope>",
+                    "@timestamp": "2019-01-21T18:40:35.078Z",
+                    "soa_resource": "TarjetaDebito",
+                    "soa_event": "INFO",
+                    "ip_SRC": "10.241.241.14",
+                    "soa_token": "SVCDYNMCRMSOADESA",
+                    "message": "2019-01-21 15:40:35,078 INFO TarjetaDebito.consultaDetalle.Interface.response broker_timestamp:2019-01-21 15:40:35.12997, tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, caller_tx_id:INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5, session_id:, canal_id:CRM, token:SVCDYNMCRMSOADESA, host_source:10.241.241.14, ip_source:10.241.241.14, raw_payload:PE5TMTpFbnZlbG9wZSB4bWxuczpOUzE9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIj48TlMxOkhlYWRlcj48TlMyOnNvYXBIZWFkZXJSZXMgeG1sbnM6TlMyPSJodHRwOi8vd3d3LnN1cGVydmllbGxlLmNvbS5hci94c2QvSW50ZWdyYWNpb24vSGVhZGVyLXYxIj48dHhJZD5JTlRCS18wMTpmMDUxMTgyNy0yOGEwLTRmYmQtYjc4Yi1jMjcxZjJmN2U2YTU8L3R4SWQ+PHNlc3Npb25Db250ZXh0PjxzZXNzaW9uPjx1c2VyTmFtZT5zdmNkeW5tY3JtYWRtaW5kZXNhPC91c2VyTmFtZT48c3lzdGVtSWQ+Q1JNPC9zeXN0ZW1JZD48Y2FuYWxJRD5DUk08L2NhbmFsSUQ+PC9zZXNzaW9uPjwvc2Vzc2lvbkNvbnRleHQ+PFJlc3BvbnNlRGF0YT48U3RhdHVzPlNVQ0NFU1M8L1N0YXR1cz48L1Jlc3BvbnNlRGF0YT48L05TMjpzb2FwSGVhZGVyUmVzPjwvTlMxOkhlYWRlcj48TlMxOkJvZHk+PE5TMjpSZXNwQ29uc3VsdGFEZXRhbGxlIHhtbG5zOk5TMj0iaHR0cDovL3d3dy5zdXBlcnZpZWxsZS5jb20uYXIveHNkL0ludGVncmFjaW9uL3RhcmpldGFEZWJpdG8vY29uc3VsdGFEZXRhbGxlLXYxIj48RGF0YT48Um93PjxpZGVudGlmaWNhZG9yIGRhdGFUeXBlTmFtZT0iUExBTiBTVUVMRE8iPjxpZFRhcmpldGE+NDUxNzcyMDI2MjM1MDkzOCAgIDwvaWRUYXJqZXRhPjwvaWRlbnRpZmljYWRvcj48dGl0dWxhciBkYXRhVHlwZU5hbWU9IklkQ2xpZW50ZVR5cGUiPjxwYWlzT3JpZ2VuPjgwPC9wYWlzT3JpZ2VuPjx0aXBvRG9jPjQ8L3RpcG9Eb2M+PG51bURvYz4xMDg0ODAxNiAgICA8L251bURvYz48L3RpdHVsYXI+PHRpcG9UYXJqZXRhPjxjb2RpZ28+UDwvY29kaWdvPjxkZXNjcmlwY2lvbj5QTEFOIFNVRUxETzwvZGVzY3JpcGNpb24+PC90aXBvVGFyamV0YT48ZXN0YWRvPjxjb2RpZ28+MTwvY29kaWdvPjxkZXNjcmlwY2lvbj5BY3RpdmE8L2Rlc2NyaXBjaW9uPjwvZXN0YWRvPjxjYW50RXh0cmFjY2lvbmVzQVRNPjA8L2NhbnRFeHRyYWNjaW9uZXNBVE0+PGNhbnREZXBvc2l0b3NBVE0+MDwvY2FudERlcG9zaXRvc0FUTT48bGltaXRlQ29tcHJhPjgwMC4wMDwvbGltaXRlQ29tcHJhPjxsaW1pdGVFeHRyYWNjaW9uPjcwMC4wMDwvbGltaXRlRXh0cmFjY2lvbj48dmVuY2ltaWVudG8+MjAyMy0wOC0wMTwvdmVuY2ltaWVudG8+PGNhbnRDb21wcmFzPjA8L2NhbnRDb21wcmFzPjwvUm93PjwvRGF0YT48L05TMjpSZXNwQ29uc3VsdGFEZXRhbGxlPjwvTlMxOkJvZHk+PC9OUzE6RW52ZWxvcGU+",
+                    "input": {
+                        "type": "log"
+                    },
+                    "soa_host_source": "10.241.241.14",
+                    "soa_tx_id": "INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5",
+                    "soa_caller_tx_id": "INTBK_01:f0511827-28a0-4fbd-b78b-c271f2f7e6a5",
+                    "source": "E:\\BROKERS\\elastic\\logs\\EG-TarjetaDebito.log",
+                    "soa_canal_id": "CRM",
+                    "offset": 10911140,
+                    "soa_method": "consultaDetalle",
+                    "indice": "lemu-general",
+                    "host": {
+                        "name": "DASOA-01"
+                    },
+                    "prospector": {
+                        "type": "log"
+                    },
+                    "@version": "1"
+                }
+            }
+        ]
+    }
+}

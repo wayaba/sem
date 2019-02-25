@@ -16,3 +16,17 @@ footer{
 
     margin-top: 5px;
 }
+
+h2.navbar-left{
+
+    position: absolute;
+    left: 5px;
+    margin-left: 10px;
+}
+
+.navbar-brand{
+
+    position: absolute;
+    right: 5px;
+    margin-top: 5px;
+}
