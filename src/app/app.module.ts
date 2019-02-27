@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OwlDateTimeModule, OwlNativeDateTimeModule, OWL_DATE_TIME_FORMATS } from 'ng-pick-datetime';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgxUiLoaderModule } from  'ngx-ui-loader';
@@ -28,6 +28,7 @@ export const MY_NATIVE_FORMATS = {
     BrowserModule, 
     HttpClientModule, 
     FormsModule,
+    ReactiveFormsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     BrowserAnimationsModule,

@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ɵConsole } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
 import * as moment from 'moment';
 import { Search } from './model/search';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: ['.panel{ margin-bottom: 2px; }','.panel-body{ padding: 5px; }']
 })
 
 export class AppComponent {
@@ -23,9 +24,9 @@ export class AppComponent {
     {headerName: 'Payload', field: '_source.soa_payload', editable:true, sortable: true, filter: true, width: 220},
   ];
 
-  rowData: any;
-  data: any = {};
-  search: Search = {
+  private rowData: any;
+  private data: any = {};
+  private search: Search = {
     session_id: '',
     method: '',
     date: '',
@@ -36,18 +37,41 @@ export class AppComponent {
     soa_payload: ''
   };
 
-  constructor(private elasticService : ElasticService,
-    private ngxService: NgxUiLoaderService) {
+  private searchForm: FormGroup;
+
+  constructor(
+    private elasticService : ElasticService,
+    private ngxService: NgxUiLoaderService,
+    private formBuilder: FormBuilder
+    ) {
 
   }
 
   ngOnInit() {
+
+    this.searchForm = this.formBuilder.group({
+      "txid" : new FormControl(this.search.txid),
+      "sessionId" : new FormControl(this.search.session_id),
+      "date" : new FormControl(this.search.date),
+      "method" : new FormControl(this.search.method),
+      "country" : new FormControl(this.search.country,[Validators.pattern("[0-9]*")]),
+      "doc_type" : new FormControl(this.search.doc_type,[Validators.pattern("[0-9]*")]),
+      "doc_number" : new FormControl(this.search.doc_number,[Validators.pattern("[0-9]*")])
+    });
+
     this.callElastikService();
   }
 
+  get countryField(){ return this.searchForm.get("country")}
+  get docTypeField(){ return this.searchForm.get("doc_type")}
+  get docNumberField(){ return this.searchForm.get("doc_number")}
+
   onSubmit() {
     console.log('Filtros', this.search)
-    this.callElastikService();
+    console.log(this.searchForm.status);
+    
+    if(this.searchForm.status == "VALID")
+      this.callElastikService();
   }
 
   callElastikService(){
