@@ -1,4 +1,4 @@
-import { Component, ɵConsole } from '@angular/core';
+import { Component } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
 import * as moment from 'moment';
@@ -24,9 +24,8 @@ export class AppComponent {
     {headerName: 'Payload', field: '_source.soa_payload', editable:true, sortable: true, filter: true, width: 220},
   ];
 
-  private rowData: any;
-  private data: any = {};
-  private search: Search = {
+  rowData: any;
+  search: Search = {
     session_id: '',
     method: '',
     date: '',
@@ -37,7 +36,7 @@ export class AppComponent {
     soa_payload: ''
   };
 
-  private searchForm: FormGroup;
+  searchForm: FormGroup;
 
   constructor(
     private elasticService : ElasticService,
