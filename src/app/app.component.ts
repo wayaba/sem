@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
-import * as moment from 'moment';
 import { Search } from './model/search';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
@@ -12,7 +11,6 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 
 export class AppComponent {
-  title = 'sem';
 
   columnDefs = [
     {headerName: 'Canal', field: '_source.soa_canal_id', editable:true, sortable: true, filter: true,  width: 150},
