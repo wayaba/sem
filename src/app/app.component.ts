@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
 import { ElasticService} from '../app/service/elastic.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader'; // Import NgxUiLoaderService
-import * as moment from 'moment';
 import { Search } from './model/search';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: ['.panel{ margin-bottom: 2px; }','.panel-body{ padding: 5px; }']
+  styles: [
+    '.panel{ margin-bottom: 2px; }',
+    '.panel-body{ padding: 5px; }',
+    '.btn{ margin-right: 2px; }',
+    '.buttons-group{ margin-top: 5px; }'
+  ]
 })
 
 export class AppComponent {
-  title = 'sem';
 
   columnDefs = [
     {headerName: 'Canal', field: '_source.soa_canal_id', editable:true, sortable: true, filter: true,  width: 150},
@@ -38,6 +41,10 @@ export class AppComponent {
 
   searchForm: FormGroup;
 
+  gridHeight: string;
+
+  containerCssProperties: any;
+
   constructor(
     private elasticService : ElasticService,
     private ngxService: NgxUiLoaderService,
@@ -57,6 +64,14 @@ export class AppComponent {
       "doc_type" : new FormControl(this.search.doc_type,[Validators.pattern("[0-9]*")]),
       "doc_number" : new FormControl(this.search.doc_number,[Validators.pattern("[0-9]*")])
     });
+    // como no puedo obtener los altos del header y footer, los dejo estáticos 
+    let height = (window.innerHeight -53) ;
+    // como no puedo obtener el alto de formulario, fijo un valor cercano
+    this.gridHeight =(height - 138)  + "px";
+
+    this.containerCssProperties = {
+      "min-height" : height + "px"
+    };
 
     this.callElastikService();
   }
