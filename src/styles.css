@@ -2,26 +2,132 @@
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 @import "~ag-grid-community/dist/styles/ag-theme-material.css";
-@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@coreui/coreui/dist/css/coreui.min.css';
 @import "~ng-pick-datetime/assets/style/picker.min.css";
+@import '~highlight.js/styles/github.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body > .container-fluid{
+
+    padding-top : 53px;
+}
+#mainNav {
+    font-weight: 700;
+    background-color: rgb(27,5,7)!important;
+  }
+  
+  #mainNav .navbar-brand {
+    color: #fff;
+  }
+  
+  #mainNav .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+  }
+  
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #fff;
+  }
+  
+  #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: rgb(250,169,54);
+  }
+  
+  #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #fff;
+  }
+  
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: rgb(250,169,54);
+  }
+  
+  #mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+  
+  @media (min-width: 992px) {
+    #mainNav {
+      -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+    }
+    #mainNav .navbar-brand {
+      font-size: 1em;
+      -webkit-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    #mainNav .navbar-nav {
+      margin-top: 0;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: #fff;
+      background: rgb(250,169,54);
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+      color: #fff;
+      background: rgb(250,169,54);
+    }
+    #mainNav.navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.5em;
+    }
+  }
 
 footer{
-
-    background-color: #424242;
+    background-color: rgb(27,5,7)!important;
     color: #fff;
     padding: 10px 0px;
 }
 
-h2.navbar-left{
+.btn{
 
-    position: absolute;
-    left: 5px;
-    margin-left: 10px;
+    margin: 5px 0px;
 }
 
-.navbar-brand{
+.logo{
+    position: relative;
+    float: right;
+    height: 100px;
+    top: 10px;
+}
 
-    position: absolute;
-    right: 5px;
-    margin-top: 5px;
+.card-header{
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.card-header > *{
+
+    margin-bottom: 0px;
+}
+
+@media (max-width : 767px){
+
+    nav h2{
+
+        width: 60%;
+        float: left;
+    }
+
+    .app-header .navbar-brand{
+
+        float: right;
+        z-index: 5;
+    }
+}
+
+/* formularios */
+div.form-group{
+
+  margin-bottom: 4px;
+}
+
+div.form-group > label{
+
+  margin-bottom: 2px;
 }

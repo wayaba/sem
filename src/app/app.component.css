@@ -1,0 +1,139 @@
+@keyframes copiedSpan {
+
+    from { display: inline !important;}
+    to {display: hidden !important;}
+}
+
+/* colores para las rows principales */
+/*
+#error-section{  background-color: #DB060C; }
+#average-section{  background-color: #79093C; }
+#search-section{  background-color: #B77595; }
+*/
+#error-section{  background-color: #EDBC96; }
+#average-section{  background-color: #ACBECA; }
+#search-section{  background-color: #C5AC95; }
+
+div.container-fluid > div.row > div:nth-child(1){
+
+    margin-top : 24px;
+    padding-top : 40px;
+}
+
+div.container-fluid > div.row h2{
+
+  color: #fff;
+  margin: 0px 0px 56px 0px;
+}
+
+pre, #main-payload{
+
+    height: 250px;
+}
+
+.btn{ margin-right: 5px; }
+
+th:nth-child(2),td:nth-child(2){
+
+    width: 30%;
+}
+/* estilos para chevron */
+
+.card-header a .fa-chevron-up{
+
+    position: absolute;
+    right: 1px;
+}
+
+.card-header  h4  .fa {
+    transition: .2s transform ease-in-out;
+  }
+
+.card-header  h4  .collapsed .fa {
+    transform: rotate(180deg);
+  }
+
+  /* estilos para las tablas */
+table td,table th{
+
+    padding : 6px 12px;
+}
+#table-lowest tr:nth-child(1){ width: 40%; }
+#table-lowest tr:nth-child(2){ width: 40%; }
+#table-lowest tr:nth-child(3){ width: 20%; }
+
+#table-childs tr:nth-child(1){ width: 30%; }
+#table-childs tr:nth-child(2){ width: 10%; }
+#table-childs tr:nth-child(3){ width: 10%; }
+#table-childs tr:nth-child(4){ width: 10%; }
+#table-childs tr:nth-child(5){ width: 15%; }
+#table-childs tr:nth-child(6){ width: 10%; }
+#table-childs tr:nth-child(7){ width: 15%; }
+
+/* tarjetas de procesos lentos */
+
+.card-lowest .card-body{
+
+    padding: 10px 20px 10px 20px !important;
+}
+
+.card-lowest .soa-method{
+
+    font-size: 12px;
+}
+
+.card-lowest .soa-resource{
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.avg-chart{
+
+    margin-top: 10px;
+    border-top:  4px solid rgb(200, 206, 211);
+    padding-top: 10px;
+}
+
+  a {
+    color: #18BC9C;
+  }
+  
+  a:focus, a:hover, a:active {
+    color: #128f76;
+  }
+
+  #floating-alert{
+
+    position: relative;
+  }
+
+  /* formulario */
+
+  .form-buttons{
+
+    position: absolute;
+    bottom: 0px;
+  }
+
+  #alert-selected-row{
+
+    margin-top: 60px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #table-errors > tbody > tr {
+
+    transition-property: background-color, border-color;
+    transition-duration: 1.2s;
+  }
+
+  #table-errors > tbody > tr.bg-danger{
+
+    border-color: rgb(245,48,46);
+    background-color: rgb(248,108,107);
+  }
+  

@@ -1,75 +1,457 @@
-<div class="container-fluid" [ngStyle]="containerCssProperties">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <form name="form" (ngSubmit)="onSubmit()" [formGroup]="searchForm" #f="ngForm" novalidate>
+<div class="container-fluid" data-offset="0">
+    <div class="row" id="error-section">      
+      <div class="col-12">
+        <h2 class="text-center">Excepciones</h2>
+        <div class="card">
+          <div class="card-body collapse show" id="card-errors">
             <div class="row">
-              <div class="col-xs-6">
-                <div class="row">
-                  <div class="form group col-xs-6">
-                    <label for="txid">SOA TxID</label>
-                    <input id="txid" name="txid"  formControlName="txid" class="form-control" [(ngModel)]="search.txid" autocomplete="off" placeholder="TX ID"/>
-                  </div>
-                  <div class="form group col-xs-6">
-                    <label for="session_id">Session ID</label>
-                    <input id="session_id" name="session_id" formControlName="sessionId" class="form-control" [(ngModel)]="search.session_id" autocomplete="off" placeholder="Session id"/>
-                  </div>
-                  <div class="form group col-xs-6">
-                    <label for="method">Método</label>
-                    <input id="method" name="method"  formControlName="method" class="form-control" [(ngModel)]="search.method" autocomplete="off" placeholder="Metodo"/>
-                  </div>
-                  <div class="form group col-xs-6">
-                    <label for="date">Fecha</label>
-                    <input class="form-control" id="date" name="date" formControlName="date" [(ngModel)]="search.date" [owlDateTimeTrigger]="date" [owlDateTime]="date" placeholder="Seleccionar fecha">
-                    <owl-date-time [pickerType]="'calendar'" #date></owl-date-time>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <h4>filtrar por datos de cliente</h4>
-                  </div>
-                  <div class="form group col-xs-4">
-                    <label for="country">País de origen</label>
-                    <input id="country" name="country" formControlName="country" class="form-control" [(ngModel)]="search.country" autocomplete="off" placeholder="Codigo Pais"/>
-                  </div>
-                  <div class="form group col-xs-4">
-                    <label for="doc_type">Tipo</label>
-                    <input id="doc_type" name="doc_type" formControlName="doc_type" class="form-control" [(ngModel)]="search.doc_type" autocomplete="off" placeholder="Tipo doc" />
-                  </div>
-                  <div class="form group col-xs-4">
-                    <label for="doc_number">Número</label>
-                    <input id="doc_number" name="doc_number" formControlName="doc_number" class="form-control" [(ngModel)]="search.doc_number" autocomplete="off" placeholder="Numero"/>
-                  </div>
-                  <label class="text-danger" *ngIf="searchForm.status != 'VALID'">
-                    Los campos para buscar por documento solo pueden contener caracteres numéricos
-                  </label>
+              <div class="col-sm-5">
+                <div class="small text-muted">
+                  Última actualización: <span id="error-last-update"></span>&nbsp;
+                  <i class="fas fa-sync"></i>
                 </div>
               </div>
             </div>
-            <div class="-xs-4 col-xs-offset-4 buttons-group">
-			        <button class="btn btn-success">Buscar</button>
-              <button class="btn btn-primary" (click)="cleanFilter();">Limpiar Filtros</button>
+            <div class="row">
+              <div class="col-12 col-ms-12 col-lg-9">
+                <table class="table table-responsive-sm table-hover table-outline mb-0 text-center" id="table-errors">
+                  <thead class="bg-secondary">
+                    <tr>
+                      <th>SOA errror</th>
+                      <th>Recurso</th>
+                      <th>Método</th>
+                      <th>Versión</th>
+                      <th>Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let row of errorRowData; let i = index" class="error-row" (click)="fillErrorQty(row, i)" [ngClass]="i === selectedErrorIndex ? 'bg-danger' : ''">
+                      <td>{{ row.soa_error }}</td>
+                      <td>{{ row.soa_resource }}</td>
+                      <td>{{ row.soa_method }}</td>
+                      <td>{{ row.soa_operation_version }}</td>
+                      <td>{{ row.soa_broker_timestamp | date :'dd-MMM-yy h:mm:ss'}}</td>
+                    </tr>
+                  </tbody> 
+                </table>
+                <div class="alert alert-warning text-center" *ngIf="errorRowData?.length == 0">
+                   No se han encontrado datos en los ultimos 3'
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-lg-3" *ngIf="selectedErrorRow">
+                <div class="card text-white card-lowest bg-danger">
+                  <div class="card-body pb-0">
+                    <div class="soa-resource">{{selectedErrorRow.soa_resource}}</div>
+                    <div class="soa-method">{{selectedErrorRow.soa_method}}</div>
+                    <div class="soa_version">Versión {{selectedErrorRow.soa_operation_version}}</div>
+                    <div>Cantidad de errores en la cercanía: <span>{{selectedErrorRow.error_qty}}</span></div>
+                    <div class="small">(Últimos 3')</div>
+                    <a class="btn btn-outline-dark text-white" (click)="goToFilter()" href="#searchResults">Filtrar</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row" id="average-section">
+    <div class="col-md-12">
+      <h2 class="text-center">Promedios de demoras y accesos</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6 col-xl-4" *ngFor="let avg of avgCardData; let i = index">
+              <div class="card text-white card-lowest bg-danger" [style.opacity]="1 - 0.13 * i">
+                <div class="card-body pb-0">
+                  <div class="text-value">Count : {{ avg.soa_access_count }} </div>
+                  <div class="soa-resource">{{ avg.soa_resource }}</div>
+                  <div class="soa-method">{{ avg.soa_method }}</div>
+                  <div class="soa-method">{{ avg.soa_operation_version }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <h4 class="card-title mb-0">Servicios con mayor % de tiempo de respuesta</h4>
+              <div class="small text-muted">Última actualización: <span id="avg-last-update"></span>&nbsp;
+                <i class="fas fa-sync"></i>
+              </div>
+            </div>
+          </div><!--/.row-->
+          <table class="table table-responsive-sm table-hover table-outline mb-0 text-center" id="table-lowest"  *ngIf="avgTopFiveData">
+            <thead class="thead-light">
+              <tr class="text-center">
+                <th>Servicio</th>
+                <th>Método</th>
+                <th>Versión</th>
+                <th>Demora(seg.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center" *ngFor="let avg of avgTopFiveData; let i = index">
+                <td class="text-center">
+                  {{ avg.soa_resource }}
+                </td>
+                <td>
+                  {{ avg.soa_method }}
+                </td>
+                <td class="text-center">
+                    {{ avg.soa_operation_version }}
+                </td>
+                <td class="text-center">
+                  {{ avg.soa_broker_timestamp_elapsed | number: "1.0-2" }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert alert-warning text-center" *ngIf="avgTopFiveData?.length == 0">
+            No se han encontrado datos
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                <h4>Mayor tiempo de acceso</h4>
+                <canvas baseChart  *ngIf="graphTopData"
+                height="20vh" width="80vw"
+                [datasets]="graphTopData"
+                [labels]="graphTopLabel"
+                [options]="graphTopOptions"
+                [colors]="chartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType">
+                </canvas>
+          </div>
+        </div>
+        </div>  
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+            <!-- se perdió el span que indica el rango de tiempo de la consulta -->
+            <h4>Cantidad de accesos y % de demora</h4>
+            <canvas baseChart *ngIf="bubbleChartData"
+            height="20vh" width="80vw"
+            [datasets]="bubbleChartData"
+            [options]="bubbleChartOptions"
+            [colors]="chartColors"
+            [legend]="bubbleChartLegend" 
+            [chartType]="bubbleChartType">
+            </canvas>
+          </div>
+      </div>
+    </div>      
+  </div>
+  <div class="row" id="search-section">
+    <div class="col-12">
+      <h2 class="text-center">Búsqueda</h2>
+      <div class="card">
+        <div class="card-body collapse show" id="search-form">
+          <form name="form" (ngSubmit)="onSubmit()" [formGroup]="searchForm" #f="ngForm" novalidate>
+            <div class="row">
+              <div class="col-12 col-sm-9 col-md-8">
+                <div class="row">
+                  <div class="form-group col-6 col-md-4">
+                    <label for="soa_tx_id">SOA TxID</label>
+                    <input id="soa_tx_id" name="soa_tx_id"  formControlName="soa_tx_id" class="form-control" autocomplete="off" placeholder="TX ID"/>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="soa_session_id">Session ID</label>
+                    <input id="soa_session_id" name="soa_session_id" formControlName="soa_session_id" class="form-control" autocomplete="off" placeholder="Session id"/>
+                  </div>
+                  <div class="form-group col-3 col-md-2">
+                    <label for="soa_canal_id">Canal</label>
+                    <input id="soa_canal_id" name="soa_canal_id"  formControlName="soa_canal_id" class="form-control" autocomplete="off" placeholder="Canal"/>
+                  </div>
+                  <div class="form-group col-3 col-md-2">
+                    <label for="soa_token">Usuario</label>
+                    <input id="soa_token" name="soa_token"  formControlName="soa_token" class="form-control" autocomplete="off" placeholder="Usuario"/>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="soa_resource">Recurso</label>
+                    <input id="soa_resource" name="soa_resource"  formControlName="soa_resource" class="form-control" autocomplete="off" placeholder="Recurso"/>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="soa_method">Método</label>
+                    <input id="soa_method" name="soa_method"  formControlName="soa_method" class="form-control" autocomplete="off" placeholder="Metodo"/>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="soa_broker_timestamp_req">Fecha</label>
+                    <input class="form-control" id="soa_broker_timestamp_req" name="soa_broker_timestamp_req" formControlName="soa_broker_timestamp_req" [owlDateTimeTrigger]="soa_broker_timestamp_req" [owlDateTime]="soa_broker_timestamp_req" placeholder="Seleccionar fecha">
+                    <owl-date-time [pickerType]="'calendar'" #soa_broker_timestamp_req></owl-date-time>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-3 col-md-4">
+                <div class="row">
+                  <div class="form-group col-6 col-md-3">
+                    <label for="country">País</label>
+                    <input id="country" name="country" formControlName="country" class="form-control" autocomplete="off" placeholder="Codigo Pais"/>
+                    <span class="text-danger" *ngIf="searchForm.get('country').errors">El campo no puede contener letras</span>
+                  </div>
+                  <div class="form-group col-6 col-md-3">
+                    <label for="doc_type">Tipo</label>
+                    <input id="doc_type" name="doc_type" formControlName="doc_type" class="form-control" autocomplete="off" placeholder="Tipo doc" />
+                    <span class="text-danger" *ngIf="searchForm.get('doc_type').errors">El campo no puede contener letras</span>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <label for="doc_number">Número</label>
+                    <input id="doc_number" name="doc_number" formControlName="doc_number" class="form-control" autocomplete="off" placeholder="Numero"/>
+                    <span class="text-danger" *ngIf="searchForm.get('doc_number').errors">El campo no puede contener letras</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 form-buttons">
+                    <button class="btn btn-success align-center float-right">Buscar</button>
+                    <button class="btn btn-primary align-center float-right" (click)="cleanFilter();">Limpiar Filtros</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <div class="col-xs-12">
-      <ag-grid-angular 
-        style="height: 650px;" 
-        class="ag-theme-material"
-        [pagination]="true"
-        [paginationPageSize]=10
-        [paginationAutoPageSize]=false
-        [enableSorting]="true"
-        [rowData]="rowData"
-        [columnDefs]="columnDefs"
-        >
-      </ag-grid-angular>
-      <ngx-ui-loader></ngx-ui-loader>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body" id="searchResults">
+          <div class="row">
+            <div class="col-sm-5">
+              <h4>Resultados de búsqueda</h4>
+            </div>
+          </div>
+          <ag-grid-angular 
+            style="height: 331px;" 
+            class="ag-theme-balham"
+            [rowData]="mainRowData"
+            [gridOptions]="mainGridOptions"
+            (selectionChanged)="mainGridSelectionChanged($event)" 
+            (gridReady)="mainGridReady($event)"
+            (modelUpdated)="onModelUpdated()"
+          >
+          </ag-grid-angular>
+          <ngx-ui-loader></ngx-ui-loader>
+        </div>
+      </div>
     </div>
-  </div>
+      <div class="col-12" *ngIf="selectedRow!=null">
+            <div class="card">
+          <div class="card-body collapse show" id="card-graphs">
+       
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <h4 class="card-title mb-0">Tiempos Máximos</h4>
+                        <div class="small text-muted">Últimos <span id="max-data-minutes">3</span> minutos</div>
+                      </div>
+                      <div class="col-sm-7 col-12">
+                               <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                          <label class="btn btn-outline-secondary btn-sm active" id="graph-max-3" (click)="fillGraphMaxData(3)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>3'
+                          </label>
+                          <label class="btn btn-outline-secondary btn-sm" (click)="fillGraphMaxData(5)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>5'
+                          </label>
+                          <label class="btn btn-outline-secondary btn-sm" (click)="fillGraphMaxData(10)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>10'
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <canvas baseChart  *ngIf="graphMaxData"
+                      [datasets]="graphMaxData"
+                      [labels]="graphMaxLabel"
+                      [options]="graphMaxOptions" 
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType">
+                    </canvas>
+                </div>
+                <div class="col-12 col-sm-6" id="payload-request">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h4 class="card-title mb-0">Cantidad de accesos</h4>
+                      <div class="small text-muted">Últimos <span id="count-data-minutes">3</span> minutos</div>
+                    </div>
+                    <div class="col-sm-7 col-12">
+                    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                          <label class="btn btn-outline-secondary btn-sm active" id="graph-count-3" (click)="fillGraphCountData(3)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>3'
+                          </label>
+                          <label class="btn btn-outline-secondary btn-sm" (click)="fillGraphCountData(5)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>5'
+                          </label>
+                          <label class="btn btn-outline-secondary btn-sm" (click)="fillGraphCountData(10)">
+                            <input type="radio" name="performance-time-option"/><i class="far fa-clock"></i>10'
+                          </label>
+                        </div>
+                    </div>
+                  </div>
+                  <canvas baseChart  *ngIf="graphCountData"
+                    [datasets]="graphCountData"
+                    [labels]="graphCountLabel"
+                    [options]="graphCountOptions"  
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType">
+                  </canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-12" *ngIf="selectedRow!=null">
+          <div class="card">
+       
+        <div class="card-body collapse show" id="card-events">
+     
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                  <div class="row">
+                      <div class="col-sm-5">
+                        <h4 class="card-title mb-0">Timemarks</h4>
+                      </div>
+                    </div>
+                    <table class="table table-responsive-sm table-hover table-outline mb-0 text-center">
+                        <thead class="thead-light">
+                          <tr class="text-center">
+                            <th>Servicio</th>
+                            <th>Método</th>
+                            <th>Demora(seg.)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="text-center" *ngFor="let timemarkItem of timemarkRowData; let i = index">
+                            <td class="text-center">
+                              {{ timemarkItem._source.soa_resource }}
+                            </td>
+                            <td>
+                              {{ timemarkItem._source.soa_method }}
+                            </td>
+                            <td class="text-center">
+                              {{ timemarkItem._source.soa_broker_timestamp_elapsed | number: "1.0-2" }}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="alert alert-warning text-center" *ngIf="timemarkRowData?.length == 0">
+                        No se han encontrado datos
+                      </div>
+                      <!--
+                  <ag-grid-angular 
+                  style="height: 331px;" 
+                  class="ag-theme-balham"
+                  [rowData]="timemarkRowData"
+                  [gridOptions]="mainGridOptions"
+                >
+                </ag-grid-angular>
+                -->
+              </div>
+              <div class="col-12 col-sm-6">
+                  <div class="row">
+                      <div class="col-sm-5">
+                        <h4 class="card-title mb-0">Backend</h4>
+                      </div>
+                    </div>
+                    <table class="table table-responsive-sm table-hover table-outline mb-0 text-center">
+                        <thead class="thead-light">
+                          <tr class="text-center">
+                            <th>Servicio</th>
+                            <th>Método</th>
+                            <th>Demora(seg.)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="text-center" *ngFor="let backendItem of backendRowData; let i = index">
+                            <td class="text-center">
+                              {{ backendItem._source.soa_resource }}
+                            </td>
+                            <td>
+                              {{ backendItem._source.soa_method }}
+                            </td>
+                            <td class="text-center">
+                              {{ backendItem._source.soa_broker_timestamp_elapsed | number: "1.0-2" }}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="alert alert-warning text-center" *ngIf="backendRowData?.length == 0">
+                        No se han encontrado datos
+                      </div>
+                    <!--
+                <ag-grid-angular 
+              style="height: 331px;" 
+              class="ag-theme-balham"
+              [rowData]="backendRowData"
+              [gridOptions]="mainGridOptions"
+            >
+            </ag-grid-angular>
+            -->
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="col-12" id="child-processes-panel" *ngIf="selectedRow!=null">
+            <div class="card">
+              
+              <div class="card-body collapse show" id="card-child-grid">
+                <ag-grid-angular 
+                style="height: 200px;" 
+                class="ag-theme-balham"
+                [rowData]="chilRowdData"
+                [gridOptions]="childGridOptions"
+                (selectionChanged)="childGridSelectionChanged($event)" 
+                (gridReady)="childGridReady($event)"
+                >
+                </ag-grid-angular>
+          </div>
+        </div>
+    </div>
+    <div class="col-12" *ngIf="selectedRow!=null">
+            <div class="card">
+            
+              <div class="card-body collapse show" id="card-payloads">
+          <div class="row">
+            <div class="col-12 col-sm-6" id="payload-request">
+              <div class="row">
+                <div class="col-6">
+                  <h4>Request Payload</h4>
+                </div>
+                <div class="col-6">
+                  <button ngxClipboard [cbContent]="payloadHTMLRequest" class="btn btn-outline-success float-right">
+                      <i class="fas fa-copy"></i>&nbsp;Copiar
+                  </button>
+                </div>
+              </div>
+              <pre lang="xml"><code [highlight]="payloadHTMLRequest"></code></pre>
+            </div>
+            <div class="col-12 col-sm-6" id="payload-response">
+              <div class="row">
+                <div class="col-6">
+                  <h4>Response Payload</h4>
+                </div>
+                <div class="col-6">
+                  <button ngxClipboard [cbContent]="payloadHTMLResponse" class="btn btn-outline-success float-right">
+                    <i class="fas fa-copy"></i>&nbsp;Copiar
+                  </button>
+                </div>
+            </div>
+              <pre lang="xml"><code [highlight]="payloadHTMLResponse"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div> 
+</div>
+<div class="alert alert-primary alert-dismissible fixed-top" *ngIf="selectedRow!=null" [style.display]="(alertSelectedOperationEnabled && showAlertSelectedOperation) ? 'block' : 'none'" id="alert-selected-row">
+  <b>Componente: </b>{{selectedRow.soa_internal_component}} <b>TxID: </b>{{selectedRow.soa_tx_id}} <B>Servicio: </B>{{selectedRow.soa_resource}} <b>Operación: </b>{{selectedRow.soa_method}} <b>Versión: </b>{{selectedRow.soa_operation_version}}
+  <button class="close" aria-label="Close" (click)="hideAlertSelectedOperation()">
+    <span>&times;</span>
+  </button>
+</div>
 </div>

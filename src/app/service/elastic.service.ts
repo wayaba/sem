@@ -29,50 +29,39 @@ export class ElasticService {
     
     this.pepareParams(objSearch);
 
-    console.log('Asi queda el objSearch:', objSearch);
-
-    let payloadFilter : string = '*';
-    
-    if(objSearch.country != '*'){
-      payloadFilter = payloadFilter + "<paisOrigen>" + objSearch.country + "</paisOrigen>";
-    }
-    if(objSearch.doc_type != '*'){
-      payloadFilter = payloadFilter + "<tipoDoc>" + objSearch.doc_type + "</tipoDoc>";
-    }
-    if(objSearch.doc_number != '*'){
-      payloadFilter = payloadFilter + "<numDoc>" + objSearch.doc_number + "</numDoc>";
-    }
-    if(payloadFilter != '*'){
-      payloadFilter = payloadFilter + "*";
-    }
-
     let requestBody: any = {
-      "from" : 0 ,"size" : 50, 
+      "from" : 0 ,"size" : 100,
+      "sort" : [{"soa_broker_timestamp_req" : {"order" : "desc","unmapped_type" : "long"}}], 
       "query": {
         "query_string": {
           "query": `
-            (soa_payload: ${ objSearch.soa_payload }) 
-            AND (soa_broker_timestamp: ${ objSearch.date }) 
-            AND (soa_method:\" ${ objSearch.method }\") 
-            AND (soa_tx_id:\" ${ objSearch.txid }\")`,         
+            ((soa_payload_in: ${ objSearch.soa_payload }) OR (soa_payload_out: ${ objSearch.soa_payload }))
+            AND (soa_broker_timestamp_req: ${ objSearch.soa_broker_timestamp_req })
+            AND (soa_canal_id: ${ objSearch.soa_canal_id}) 
+            AND (soa_resource: ${ objSearch.soa_resource}) 
+            AND (soa_method:\" ${ objSearch.soa_method }\") 
+            AND (soa_token: ${ objSearch.soa_token}) 
+            AND (soa_tx_id:\" ${ objSearch.soa_tx_id }\")
+            AND (indice:\"soa-auditoria\")
+            AND (soa_internal_component:\"${ objSearch.soa_internal_component }\")`,         
           "analyze_wildcard": true,
           "default_field": "*"
         }
       }
     }
 
-    //AND (message: session_id\\:${ objSearch.session_id })`,
-    console.log(requestBody);
-
     return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
 
   private pepareParams(objSearch: Search){
     
-    objSearch.session_id = (objSearch.session_id == '')? '*':objSearch.session_id;
-    objSearch.method = (objSearch.method == '')? '*':objSearch.method;
-    objSearch.txid = (objSearch.txid == '')? '*':objSearch.txid;
-    objSearch.date = (objSearch.date == '')? '*':objSearch.date;   
+    objSearch.soa_session_id = (objSearch.soa_session_id == '')? '*':objSearch.soa_session_id;
+    objSearch.soa_canal_id = (objSearch.soa_canal_id == '')? '*':objSearch.soa_canal_id;
+    objSearch.soa_resource = (objSearch.soa_resource == '')? '*':objSearch.soa_resource;
+    objSearch.soa_method = (objSearch.soa_method == '')? '*':objSearch.soa_method;
+    objSearch.soa_token = (objSearch.soa_token == '')? '*':objSearch.soa_token;
+    objSearch.soa_tx_id = (objSearch.soa_tx_id == '')? '*':objSearch.soa_tx_id;
+    objSearch.soa_broker_timestamp_req = (objSearch.soa_broker_timestamp_req == '')? '*':objSearch.soa_broker_timestamp_req;   
     objSearch.country = (objSearch.country == '')? '*':objSearch.country;   
     objSearch.doc_type = (objSearch.doc_type == '')? '*':objSearch.doc_type;   
     objSearch.doc_number = (objSearch.doc_number == '')? '*':objSearch.doc_number;
@@ -83,7 +72,7 @@ export class ElasticService {
 
     if(objSearch.country != '*'){
       let country = Number(objSearch.country);
-      payloadFilter = "(\"<paisOrigen>" + country + "\" OR \"<paisOrigen>0" + country + "\")";
+      payloadFilter = "(\"<country>" + country + "\" OR \"<country>0" + country + "\")";
       hasCountry = true;
     }
 
@@ -91,9 +80,9 @@ export class ElasticService {
       let doc_type = Number(objSearch.doc_type);
       if(hasCountry){
         payloadFilter = payloadFilter + ' AND ';
-        payloadFilter = payloadFilter + "(\"<tipoDoc>" + doc_type + "\" OR \"<tipoDoc>0" + doc_type + "\")";
+        payloadFilter = payloadFilter + "(\"<idType>" + doc_type + "\" OR \"<idType>0" + doc_type + "\")";
       }else{
-        payloadFilter = "(\"<tipoDoc>" + doc_type + "\" OR \"<tipoDoc>0" + doc_type + "\")";
+        payloadFilter = "(\"<idType>" + doc_type + "\" OR \"<idType>0" + doc_type + "\")";
       }
       hasType = true;
     }
@@ -101,17 +90,493 @@ export class ElasticService {
     if(objSearch.doc_number != '*'){
       if(hasCountry || hasType){
         payloadFilter = payloadFilter + ' AND ';
-        payloadFilter = payloadFilter + "(\"<numDoc>" + objSearch.doc_number + "\")";
+        payloadFilter = payloadFilter + "(\"<id>" + objSearch.doc_number + "\")";
       }else{
-        payloadFilter = "(\"<numDoc>" + objSearch.doc_number + "\")";  
+        payloadFilter = "(\"<id>" + objSearch.doc_number + "\")";  
       }
     }    
 
     objSearch.soa_payload = payloadFilter;
 
-    if(objSearch.date != "*"){
-      let d = new Date(objSearch.date);
-      objSearch.date = moment(d).format('YYYY-MM-DD');
+    if(objSearch.soa_broker_timestamp_req != "*"){
+      let d = new Date(objSearch.soa_broker_timestamp_req);
+      objSearch.soa_broker_timestamp_req = moment(d).format('YYYY-MM-DD');
     }
+  }
+  
+  public getTopAvg(minutes: number = 3): Observable<HttpResponse<any>>{
+    
+    let gteTime = "now-" + minutes + "m";
+
+    const reqBody = {
+        "sort": [
+            {
+                "average": {
+                    "order": "desc",
+                    "unmapped_type": "long"
+                }
+            }
+        ],
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_internal_component": {
+                                "query": "Interface"
+                            }
+                        }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp_req": {
+                                "gte": `${ gteTime }`,
+                                "lte": "now",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+    "aggs": {
+        "byResource": {
+            "terms": {
+                "field": "soa_resource.keyword",
+                "size": 10
+            },
+            "aggs": {
+                "byMethod": {
+                    "terms": {
+                        "field": "soa_method.keyword",
+                        "size": 10
+                    },
+                    "aggs": {
+                        "byVersion": {
+                            "terms": {
+                                "field": "soa_operation_version.keyword",
+                                "size": 10
+                            },
+                            "aggs": {
+                                "average": {
+                                    "avg": {
+                                        "field": "soa_broker_timestamp_elapsed"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "size": 0
+}
+
+    return this.http.post<any>(`${this.baseUrl}/_search`,reqBody,{observe: "response"});
+  }
+
+  public getTopGraph(minutes: number = 20): Observable<HttpResponse<any>>{
+    let gteTime = "now-" + minutes + "m";
+      const reqBody = 
+      {
+        "sort": [
+            {
+                "soa_broker_timestamp_req": {
+                    "order": "desc",
+                    "unmapped_type": "long"
+                }
+            }
+        ],
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_internal_component": {
+                                "query": "Interface"
+                            }
+                        }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp_req": {
+                                "gte": `${ gteTime }`,
+                                "lte": "now",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "aggs": {
+            "byResource": {
+                "terms": {
+                    "field": "soa_resource.keyword",
+                    "size": 10
+                },
+                "aggs": {
+                    "byMethod": {
+                        "terms": {
+                            "field": "soa_method.keyword",
+                            "size": 10
+                        },
+                        "aggs": {
+                            "byVersion": {
+                                "terms": {
+                                    "field": "soa_operation_version.keyword",
+                                    "size": 10
+                                },
+                                "aggs": {
+                                    "counts_over_time": {
+                                        "date_histogram": {
+                                            "field": "soa_broker_timestamp_req",
+                                            "interval": "1m",
+                                            "time_zone": "-03:00"
+                                        },
+                                        "aggs": {
+                                            "hourly_usage": {
+                                                "max": {
+                                                    "field": "soa_broker_timestamp_elapsed"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "size": 0
+    }
+
+    return this.http.post<any>(`${this.baseUrl}/_search`,reqBody,{observe: "response"});
+  }
+
+  public getMaxByTime(objSearch: Search, minutes: number = 3): Observable<HttpResponse<any>>{
+
+    let d = new Date(objSearch.soa_broker_timestamp_req);      
+    let dateTo = moment(d).format('YYYY-MM-DD HH:mm:ss');
+    let dateFrom = moment(d.setMinutes(d.getMinutes() - minutes)).format('YYYY-MM-DD HH:mm:ss');
+
+    let requestBody: any = {
+      
+        "sort": [
+            {
+                "soa_broker_timestamp_req": {
+                    "order": "desc",
+                    "unmapped_type": "long"
+                }
+            }
+        ],
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_resource": {
+                                "query": `${ objSearch.soa_resource }`
+                            }
+                        }
+                    },
+                     {
+                        "match_phrase": {
+                            "soa_internal_component": {
+                                "query": `${ objSearch.soa_internal_component }`
+                            }
+                        }
+                    },
+                    {
+                      "match_phrase": {
+                          "soa_method": {
+                              "query": `${ objSearch.soa_method }`
+                          }
+                      }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp_req": {
+                                "gte": `${ dateFrom }`,
+                                "lte": `${ dateTo }`,
+                                "format": "yyyy-MM-dd HH:mm:ss",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "aggs": {
+            "counts_over_time": {
+                "date_histogram": {
+                    "field": "soa_broker_timestamp_req",
+                    "interval": "1m",
+                    "time_zone": "-03:00"
+                },
+                "aggs": {
+                    "hourly_usage": {
+                        "max": {
+                            "field": "soa_broker_timestamp_elapsed"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
+
+  public getCountByTime(objSearch: Search, minutes: number = 3): Observable<HttpResponse<any>>{
+
+    let d = new Date(objSearch.soa_broker_timestamp_req);      
+    let dateTo = moment(d).format('YYYY-MM-DD HH:mm:ss');
+    let dateFrom = moment(d.setMinutes(d.getMinutes() - minutes)).format('YYYY-MM-DD HH:mm:ss');
+
+    let requestBody: any = {
+      
+        "sort": [
+            {
+                "soa_broker_timestamp_req": {
+                    "order": "desc",
+                    "unmapped_type": "long"
+                }
+            }
+        ],
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_resource": {
+                                "query": `${ objSearch.soa_resource }`
+                            }
+                        }
+                    },
+                     {
+                        "match_phrase": {
+                            "soa_internal_component": {
+                                "query": `${ objSearch.soa_internal_component }`
+                            }
+                        }
+                    },
+                    {
+                      "match_phrase": {
+                          "soa_method": {
+                              "query": `${ objSearch.soa_method }`
+                          }
+                      }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp_req": {
+                                "gte": `${ dateFrom }`,
+                                "lte": `${ dateTo }`,
+                                "format": "yyyy-MM-dd HH:mm:ss",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "aggs": {
+            "counts_over_time": {
+                "date_histogram": {
+                    "field": "soa_broker_timestamp_req",
+                    "interval": "1m",
+                    "time_zone": "-03:00"
+                }
+            }
+        }
+    }
+
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
+
+public getTopMaxGraph(minutes: number = 3): Observable<HttpResponse<any>>{
+    let gteTime = "now-" + minutes + "m";
+      const reqBody = 
+      {
+        "sort": [
+            {
+                "soa_broker_timestamp_req": {
+                    "order": "desc",
+                    "unmapped_type": "long"
+                }
+            }
+        ],
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_internal_component": {
+                                "query": "Interface"
+                            }
+                        }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp_req": {
+                                "gte": `${ gteTime }`,
+                                "lte": "now",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "aggs": {
+            "byResource": {
+                "terms": {
+                    "field": "soa_resource.keyword",
+                    "size": 10
+                },
+                "aggs": {
+                    "byMethod": {
+                        "terms": {
+                            "field": "soa_method.keyword",
+                            "size": 10
+                        },
+                        "aggs": {
+                            "byVersion": {
+                                "terms": {
+                                    "field": "soa_operation_version.keyword",
+                                    "size": 10
+                                },
+                                "aggs": {
+                                    "average": {
+                                        "max": {
+                                            "field": "soa_broker_timestamp_elapsed"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "size": 0
+    }
+
+    return this.http.post<any>(`${this.baseUrl}/_search`,reqBody,{observe: "response"});
+  }
+  
+
+  public getDataByEvent(soa_tx_id: string, event: string = 'TIMEMARK'): Observable<HttpResponse<any>>{
+
+
+    let requestBody: any = {
+        "from" : 0 ,"size" : 100,
+        "query": {
+          "query_string": {
+            "query": `
+                (soa_tx_id:\"${ soa_tx_id }\") 
+                AND (soa_event:\"${ event }\")`,
+            "analyze_wildcard": true,
+            "default_field": "*"
+          }
+        }
+      }
+
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
+
+  public getChilds(soa_caller_tx_id: string): Observable<HttpResponse<any>>{
+
+    let requestBody: any = {
+        "from" : 0 ,"size" : 100,
+        "sort" : [{"soa_broker_timestamp_req" : {"order" : "desc","unmapped_type" : "long"}}], 
+        "query": {
+          "query_string": {
+            "query": `
+               (soa_caller_tx_id:\"${ soa_caller_tx_id }\")
+                AND NOT (soa_tx_id:\"${ soa_caller_tx_id }\")
+              AND (soa_internal_component:Operation)`,         
+            "analyze_wildcard": true,
+            "default_field": "*"
+          }
+        }
+      }
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
+  }
+
+  public getErrors(minutes: number = 3): Observable<HttpResponse<any>>{
+
+    let gteTime = "now-" + minutes + "m";
+
+    let requestBody: any = 
+    {
+        "sort" : [{"soa_broker_timestamp" : {"order" : "desc","unmapped_type" : "long"}}], 
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "match_phrase": {
+                            "soa_event": {
+                                "query": "ERROR"
+                            }
+                        }
+                    },
+                    {
+                        "range": {
+                            "soa_broker_timestamp": {
+                                "gte": `${ gteTime }`,
+                                "lte": "now",
+                                "time_zone": "-03:00"
+                            }
+                        }
+                    }
+                ]
+            }
+        },      
+        "aggs": {
+            "byResource": {
+                "terms": {
+                    "field": "soa_resource.keyword",
+                    "size": 10
+                },
+                "aggs": {
+                    "byMethod": {
+                        "terms": {
+                            "field": "soa_method.keyword",
+                            "size": 10
+                        },
+                        "aggs": {
+                            "byVersion": {
+                                "terms": {
+                                    "field": "soa_operation_version.keyword",
+                                    "size": 10
+                                },
+                                "aggs": {
+                                    "byError": {
+                                        "terms": {
+                                            "field": "soa_error.keyword"
+                                        },
+                                        "aggs": {
+                                            "byMaxDate": {
+                                                "max": {
+                                                    "field": "soa_broker_timestamp"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },  
+        "size": 5
+        
+    }
+
+    return this.http.post<any>(`${ this.baseUrl }/_search`, requestBody,{observe : "response"});
   }
 }
